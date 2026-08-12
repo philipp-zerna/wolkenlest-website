@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolkennest | Premium Babytragen für Nähe im Alltag</title>
-    <meta name="description" content="Wolkennest – Hochwertige Babytragen für Nähe, Komfort und euren gemeinsamen Alltag. Entwickelt von Eltern, für Eltern.">
+    <title>Wolkennest | Premium Babytragen</title>
+    <meta name="description" content="Wolkennest – Hochwertige Babytragen für Nähe, Komfort und euren gemeinsamen Alltag.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,141 +18,80 @@
     <header class="header" id="header">
         <div class="header-container">
             <a href="#" class="logo">Wolkennest</a>
-            
-            <nav class="nav" role="navigation" aria-label="Hauptnavigation">
-                <ul class="nav-menu">
-                    <li><a href="#produkt" class="nav-link">Babytragen</a></li>
-                    <li><a href="#warum" class="nav-link">Warum Wolkennest</a></li>
-                    <li><a href="#trageberatung" class="nav-link">Trageberatung</a></li>
-                    <li><a href="#geschichte" class="nav-link">Unsere Geschichte</a></li>
-                </ul>
+            <nav class="nav">
+                <a href="#produkt" class="nav-link">Babytragen</a>
+                <a href="#vorteile" class="nav-link">Vorteile</a>
+                <a href="#geschichte" class="nav-link">Über uns</a>
             </nav>
-            
-            <div class="header-actions">
-                <button class="icon-btn" aria-label="Suche">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="11" cy="11" r="7"/>
-                        <path d="M20 20l-4.35-4.35"/>
-                    </svg>
-                </button>
-                <button class="icon-btn" aria-label="Account">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
-                    </svg>
-                </button>
-                <button class="icon-btn cart-btn" aria-label="Warenkorb">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M6 6h15l-1.5 9h-12z"/>
-                        <circle cx="9" cy="20" r="1" fill="currentColor"/>
-                        <circle cx="18" cy="20" r="1" fill="currentColor"/>
-                        <path d="M6 6L5 3H2"/>
-                    </svg>
-                    <span class="cart-count">0</span>
-                </button>
-                <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <button class="icon-btn cart-btn" aria-label="Warenkorb">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 6h15l-1.5 9h-12z"/>
+                    <circle cx="9" cy="20" r="1" fill="currentColor"/>
+                    <circle cx="18" cy="20" r="1" fill="currentColor"/>
+                </svg>
+                <span class="cart-count">0</span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero - Text links, Bild rechts -->
     <section class="hero">
-        <div class="hero-image">
-            <img src="Bild%201.png" 
-                 alt="Mutter trägt Baby in Wolkennest Trage" 
-                 fetchpriority="high">
-        </div>
         <div class="hero-content">
             <span class="hero-eyebrow">Premium Babytragen</span>
             <h1 class="hero-title">Ganz nah.<br>Überall.</h1>
             <p class="hero-subtitle">Eine Babytrage, entwickelt für Nähe, Komfort und euren gemeinsamen Alltag.</p>
-            <a href="#produkt" class="btn btn-primary btn-large">Babytragen entdecken</a>
-            <p class="hero-note">Von Geburt an gedacht. Für jeden Tag gemacht.</p>
+            <a href="#produkt" class="btn btn-primary">Jetzt entdecken</a>
+        </div>
+        <div class="hero-image">
+            <img src="Bild%201.png" alt="Mutter mit Baby in Wolkennest Trage" fetchpriority="high">
         </div>
     </section>
 
     <!-- Produkt -->
     <section class="product-section" id="produkt">
         <div class="container">
-            <div class="product-showcase">
-                <div class="product-image-main">
-                    <img src="Bild%202.png" 
-                         alt="Wolkennest ONE Babytrage in Oat">
+            <div class="product-grid">
+                <div class="product-visual">
+                    <img src="Bild%202.png" alt="Wolkennest ONE Babytrage">
                 </div>
                 <div class="product-info">
-                    <span class="product-label">Unsere erste Trage</span>
                     <h2 class="product-name">Wolkennest ONE</h2>
-                    <p class="product-tagline">Eine Trage. Vom ersten Tag an.</p>
-                    <ul class="product-features">
-                        <li>Ergonomischer Sitz</li>
-                        <li>Individuell einstellbar</li>
-                        <li>Weiche, hochwertige Materialien</li>
-                    </ul>
-                    <div class="product-price">149 €</div>
+                    <p class="product-price">ab 149 €</p>
+                    <p class="product-desc">Eine Trage. Vom ersten Tag an. Entwickelt für Eltern, die Wert auf Qualität, Komfort und zeitloses Design legen.</p>
+                    
                     <div class="color-selector">
-                        <span class="color-label">Farbe wählen</span>
-                        <div class="color-swatches">
-                            <button class="color-swatch active" style="background-color: #D4C4B0;" aria-label="Oat"></button>
-                            <button class="color-swatch" style="background-color: #8B7E74;" aria-label="Stone"></button>
-                            <button class="color-swatch" style="background-color: #A7AA98;" aria-label="Sage"></button>
+                        <span>Farbe:</span>
+                        <div class="swatches">
+                            <button class="swatch active" style="background: #E8DCC8;" aria-label="Oat"></button>
+                            <button class="swatch" style="background: #9A8B7A;" aria-label="Stone"></button>
+                            <button class="swatch" style="background: #A8B5A0;" aria-label="Sage"></button>
                         </div>
                     </div>
-                    <button class="btn btn-primary btn-large">Wolkennest ONE entdecken</button>
+                    
+                    <button class="btn btn-primary btn-large">In den Warenkorb</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Brand Statement -->
-    <section class="brand-statement">
+    <!-- 3 Vorteile -->
+    <section class="benefits-section" id="vorteile">
         <div class="container">
-            <h2 class="statement-text">Nähe lässt sich nicht messen.<br>Aber man kann sie spüren.</h2>
-        </div>
-    </section>
-
-    <!-- Warum Wolkennest -->
-    <section class="features-section" id="warum">
-        <div class="container">
-            <header class="section-header">
-                <span class="section-eyebrow">Unsere Philosophie</span>
-                <h2 class="section-title">Entwickelt für euch beide.</h2>
-            </header>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-image">
-                        <img src="Bild%203.png" 
-                             alt="Vater mit Baby in Trage">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Nähe</h3>
-                        <p>Das Baby bleibt dort, wo es sich am sichersten fühlt – ganz nah bei dir.</p>
-                    </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-num">01</span>
+                    <h3>Ergonomisch</h3>
+                    <p>Optimaler Sitz für Baby und Elternteil – vom ersten Tag bis zum Kleinkindalter.</p>
                 </div>
-                
-                <div class="feature-item reverse">
-                    <div class="feature-content">
-                        <h3>Komfort</h3>
-                        <p>Gewichtsverteilung und Einstellmöglichkeiten sollen Eltern auch bei längerer Nutzung unterstützen.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="Bild%205.png" 
-                             alt="Schlafendes Baby in der Trage">
-                    </div>
+                <div class="benefit-item">
+                    <span class="benefit-num">02</span>
+                    <h3>Vielseitig</h3>
+                    <p>Vier Tragepositionen, die sich an die Entwicklung eures Kindes anpassen.</p>
                 </div>
-                
-                <div class="feature-item">
-                    <div class="feature-image">
-                        <img src="Bild%207.png" 
-                             alt="Wolkennest Packaging und Lifestyle">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Alltag</h3>
-                        <p>Schnell angelegt und gemacht für Spaziergänge, Reisen und alles dazwischen.</p>
-                    </div>
+                <div class="benefit-item">
+                    <span class="benefit-num">03</span>
+                    <h3>Nachhaltig</h3>
+                    <p>Hochwertige Materialien, die lange halten und mitwachsen.</p>
                 </div>
             </div>
         </div>
@@ -160,129 +99,77 @@
 
     <!-- Lifestyle -->
     <section class="lifestyle-section">
-        <div class="lifestyle-image">
-            <img src="Bild%203.png" 
-                 alt="Vater mit Baby in urbaner Umgebung">
+        <img src="Bild%203.png" alt="Vater mit Baby unterwegs">
+        <div class="lifestyle-text">
+            <h2>Für jede Situation.<br>Für jeden Tag.</h2>
         </div>
     </section>
 
-    <!-- Produktdetails -->
+    <!-- Material & Details -->
     <section class="details-section">
         <div class="container">
-            <header class="section-header">
-                <span class="section-eyebrow">Qualität</span>
-                <h2 class="section-title">Jedes Detail zählt.</h2>
-            </header>
-            
             <div class="details-grid">
-                <div class="detail-item">
-                    <img src="Bild%204.png" 
-                         alt="Detailaufnahme Stoff und Verarbeitung">
-                    <h3>Verarbeitung</h3>
-                    <p>Jede Naht, jeder Verschluss – auf Qualität geprüft.</p>
+                <div class="detail-large">
+                    <img src="Bild%204.png" alt="Detail Verarbeitung">
+                    <h3>Detailverliebt</h3>
+                    <p>Jede Naht, jeder Verschluss – gefertigt mit höchster Präzision.</p>
                 </div>
-                <div class="detail-item">
-                    <img src="Bild%205.png" 
-                         alt="Schlafendes Baby in der Trage">
-                    <h3>Geborgenheit</h3>
-                    <p>Sanft gebettet, nah bei dir – für ruhige Momente.</p>
+                <div class="detail-small">
+                    <img src="Bild%205.png" alt="Geborgenheit">
+                    <h3>Geborgen</h3>
+                    <p>Sanft gebettet, nah bei dir.</p>
                 </div>
-                <div class="detail-item">
-                    <img src="Bild%207.png" 
-                         alt="Wolkennest Packaging und Lifestyle">
-                    <h3>Packaging</h3>
-                    <p>Premium-Verpackung, perfekt zum Verschenken oder Bewahren.</p>
+                <div class="detail-small">
+                    <img src="Bild%207.png" alt="Packaging">
+                    <h3>Premium</h3>
+                    <p>Von der Verpackung bis zum Produkt.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Anleitung -->
-    <section class="guide-section" id="trageberatung">
+    <!-- Founder Story - Emotional -->
+    <section class="founder-section" id="geschichte">
+        <div class="founder-grid">
+            <div class="founder-image">
+                <img src="Bild%206.png" alt="Philipp und Felix, Gründer von Wolkennest">
+            </div>
+            <div class="founder-content">
+                <span class="founder-label">Unsere Geschichte</span>
+                <h2>Aus dem echten Leben.</h2>
+                <p>Wir sind Philipp und Felix. Als wir Väter wurden, suchten wir eine Babytrage, die Sicherheit, Komfort und Design vereint. Wir fanden keine, die uns überzeugte. Also entwickelten wir sie selbst.</p>
+                <p>Wolkennest ist das Ergebnis: Eine Trage, die wir selbst jeden Tag nutzen – und die wir anderen Eltern mit gutem Gewissen empfehlen können.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vertrauen -->
+    <section class="trust-section">
         <div class="container">
-            <header class="section-header">
-                <span class="section-eyebrow">Trageberatung</span>
-                <h2 class="section-title">So funktioniert es.</h2>
-            </header>
-            
-            <div class="steps-grid">
-                <div class="step-item">
-                    <span class="step-number">01</span>
-                    <h3>Anlegen</h3>
-                    <p>Trage um die Hüfte schnallen und Schultergurte überkreuzen.</p>
+            <h2>Für das Wichtigste gemacht.</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-label">Sicherheit</span>
+                    <p>Nach höchsten Standards gefertigt und geprüft.</p>
                 </div>
-                <div class="step-item">
-                    <span class="step-number">02</span>
-                    <h3>Anpassen</h3>
-                    <p>Baby hineinsetzen und Trage an die Körpergröße anpassen.</p>
+                <div class="trust-item">
+                    <span class="trust-label">Qualität</span>
+                    <p>Hochwertige Materialien für langjährige Nutzung.</p>
                 </div>
-                <div class="step-item">
-                    <span class="step-number">03</span>
-                    <h3>Nah sein</h3>
-                    <p>Fertig. Genießt die Nähe und habt beide Hände frei.</p>
+                <div class="trust-item">
+                    <span class="trust-label">Service</span>
+                    <p>Persönliche Trageberatung und 30 Tage Rückgabe.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Materialien -->
-    <section class="materials-section">
+    <!-- Final CTA -->
+    <section class="cta-section">
         <div class="container">
-            <div class="materials-content">
-                <div class="materials-text">
-                    <span class="section-eyebrow">Materialien</span>
-                    <h2 class="section-title">Was dein Baby berührt, ist uns wichtig.</h2>
-                    <p>Wir legen höchsten Wert auf Materialien, die sanft zur Haut sind und gleichzeitig strapazierfähig genug für den täglichen Gebrauch. Jeder Stoff wird sorgfältig ausgewählt und getestet.</p>
-                </div>
-                <div class="materials-image">
-                    <img src="Bild%204.png" 
-                         alt="Materialien Detail">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sicherheit -->
-    <section class="safety-section">
-        <div class="container">
-            <header class="section-header">
-                <span class="section-eyebrow">Sicherheit</span>
-                <h2 class="section-title">Für das Wichtigste gemacht.</h2>
-            </header>
-            <p class="safety-text">Jede Wolkennest Trage wird nach höchsten Standards gefertigt. Sicherheit und Qualität stehen an erster Stelle – bei jedem einzelnen Produkt.</p>
-        </div>
-    </section>
-
-    <!-- Geschichte -->
-    <section class="story-section" id="geschichte">
-        <div class="container">
-            <div class="story-grid">
-                <div class="story-image">
-                    <img src="Bild%206.png" 
-                         alt="Die Gründer von Wolkennest">
-                </div>
-                <div class="story-content">
-                    <span class="section-eyebrow">Unsere Geschichte</span>
-                    <h2 class="section-title">Entstanden aus dem echten Leben.</h2>
-                    <p>Wolkennest entstand aus einer einfachen Frage: Warum sollte etwas, das wir täglich für unsere Kinder nutzen, nicht gleichzeitig sicher, komfortabel und schön sein?</p>
-                    <p>Aus unserer eigenen Erfahrung als Väter entstand der Wunsch, Produkte zu schaffen, die wir selbst gerne jeden Tag verwenden würden.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Willkommen im Wolkennest.</h2>
-                <p>Gedanken, Neuheiten und Inspiration für die erste gemeinsame Zeit.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Deine E-Mail-Adresse" required>
-                    <button type="submit" class="btn btn-primary">Dabei sein</button>
-                </form>
-                <p class="newsletter-note">Als Willkommensgeschenk erhältst du 10% Rabatt auf deine erste Bestellung.</p>
-            </div>
+            <h2>Bereit für mehr Nähe?</h2>
+            <p>Entdecke die Wolkennest ONE – deine Begleiterin für die ersten Jahre.</p>
+            <a href="#produkt" class="btn btn-primary btn-large">Jetzt shoppen</a>
         </div>
     </section>
 
@@ -292,44 +179,19 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <span class="logo">Wolkennest</span>
-                    <p class="footer-tagline">Ganz nah. Überall.</p>
+                    <p>Ganz nah. Überall.</p>
                 </div>
-                
-                <div class="footer-nav">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">Babytragen</a></li>
-                        <li><a href="#">Zubehör</a></li>
-                    </ul>
+                <div class="footer-links">
+                    <a href="#">Shop</a>
+                    <a href="#">Trageberatung</a>
+                    <a href="#">Über uns</a>
+                    <a href="#">Kontakt</a>
                 </div>
-                
-                <div class="footer-nav">
-                    <h4>Hilfe</h4>
-                    <ul>
-                        <li><a href="#">Trageberatung</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Versand & Rückgabe</a></li>
-                        <li><a href="#">Kontakt</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-nav">
-                    <h4>Wolkennest</h4>
-                    <ul>
-                        <li><a href="#">Über uns</a></li>
-                        <li><a href="#">Unsere Werte</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
                 <div class="footer-legal">
                     <a href="#">Impressum</a>
                     <a href="#">Datenschutz</a>
                     <a href="#">AGB</a>
-                    <a href="#">Widerruf</a>
                 </div>
-                <p class="copyright">© 2026 Wolkennest</p>
             </div>
         </div>
     </footer>
