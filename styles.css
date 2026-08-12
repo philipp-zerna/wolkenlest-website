@@ -9,9 +9,9 @@
     --color-cream: #FAF8F5;
     --color-sand: #EDE8E0;
     --color-beige: #D4C8B8;
-    --color-text: #2A2A2A;
+    --color-text: #343A3E;
     --color-text-light: #6B6B6B;
-    --color-navy: #3D4F5F;
+    --color-navy: #2F4053;
     
     /* Schriften */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -126,12 +126,14 @@ img {
 }
 
 /* ============================================
-   Hero — Full Width mit Text auf Bild
+   Hero — Editorial Campaign Style
    ============================================ */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 700px;
+    width: 100vw;
+    height: 90vh;
+    min-height: 780px;
+    max-height: 880px;
     overflow: hidden;
 }
 
@@ -147,71 +149,87 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: 65% center;
 }
 
-/* Subtiler Verlauf links für Lesbarkeit */
+/* Subtiler Creme-Verlauf nur links */
 .hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 45%;
     height: 100%;
     background: linear-gradient(to right, 
-        rgba(250, 248, 245, 0.9) 0%, 
-        rgba(250, 248, 245, 0.6) 40%, 
-        transparent 70%);
+        rgba(250, 247, 242, 0.92) 0%, 
+        rgba(250, 247, 242, 0.6) 50%, 
+        transparent 100%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 450px;
-    padding: 12rem 0 4rem 6%;
+    max-width: 520px;
+    margin-left: 10%;
+    padding-top: 28vh;
 }
 
 .hero-eyebrow {
     display: block;
     font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--color-text-light);
+    color: #6B6B6B;
     margin-bottom: 1.5rem;
 }
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-size: 72px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.05;
     letter-spacing: -0.02em;
+    color: #343A3E;
     margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
     font-size: 1.0625rem;
-    color: var(--color-text-light);
+    font-weight: 300;
+    color: #4A4A4A;
     line-height: 1.6;
     margin-bottom: 2.5rem;
-    max-width: 360px;
+    max-width: 400px;
+}
+
+.hero-note {
+    font-size: 0.8125rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: #6B6B6B;
+    margin-top: 1.5rem;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
-    padding: 1rem 2.5rem;
+    padding: 1.125rem 2.5rem;
     font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
     background: var(--color-navy);
     color: white;
+    border: none;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #2a3a4a;
+    background: #243442;
 }
 
 /* ============================================
@@ -569,16 +587,21 @@ img {
    ============================================ */
 @media (max-width: 1024px) {
     .hero::before {
-        width: 70%;
+        width: 60%;
         background: linear-gradient(to right, 
-            rgba(250, 248, 245, 0.95) 0%, 
-            rgba(250, 248, 245, 0.7) 50%, 
-            transparent 80%);
+            rgba(250, 247, 242, 0.95) 0%, 
+            rgba(250, 247, 242, 0.7) 60%, 
+            transparent 100%);
     }
     
     .hero-content {
-        padding: 10rem 2rem 4rem;
-        max-width: 400px;
+        margin-left: 6%;
+        padding-top: 24vh;
+        max-width: 460px;
+    }
+    
+    .hero-title {
+        font-size: 56px;
     }
     
     .product-grid {
@@ -630,15 +653,40 @@ img {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: auto;
+    }
+    
     .hero::before {
         width: 100%;
-        background: rgba(250, 248, 245, 0.85);
+        height: 55%;
+        background: linear-gradient(to bottom, 
+            rgba(250, 247, 242, 0.98) 0%, 
+            rgba(250, 247, 242, 0.9) 60%, 
+            transparent 100%);
+    }
+    
+    .hero-image {
+        position: relative;
+        height: 60vh;
+        min-height: 500px;
+    }
+    
+    .hero-image img {
+        object-position: center 20%;
     }
     
     .hero-content {
-        text-align: center;
+        position: relative;
+        margin: 0;
+        padding: 3rem 1.5rem 4rem;
         max-width: 100%;
-        padding: 8rem 1.5rem 4rem;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 42px;
     }
     
     .hero-subtitle {
