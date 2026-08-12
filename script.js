@@ -1,23 +1,18 @@
 /**
- * Wolkennest — Premium Babytragen Brand
+ * Wolkennest — Premium Baby Brand
  * Minimal, elegant interactions
  */
 
 document.addEventListener('DOMContentLoaded', function() {
     // Header scroll behavior
     const header = document.getElementById('header');
-    let lastScroll = 0;
     
     window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 50) {
+        if (window.pageYOffset > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-        
-        lastScroll = currentScroll;
     });
     
     // Mobile menu toggle
@@ -78,14 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.addEventListener('click', function(e) {
                 if (this.textContent.includes('In den Warenkorb')) {
                     e.preventDefault();
-                    count++;
-                    if (cartCount) {
-                        cartCount.textContent = count;
-                        cartCount.style.transform = 'scale(1.2)';
-                        setTimeout(() => {
-                            cartCount.style.transform = 'scale(1)';
-                        }, 150);
-                    }
+                }
+                count++;
+                if (cartCount) {
+                    cartCount.textContent = count;
+                    cartCount.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        cartCount.style.transform = 'scale(1)';
+                    }, 150);
                 }
             });
         }
@@ -102,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (input.value) {
                 const originalText = button.textContent;
                 button.textContent = 'Angemeldet';
-                button.style.background = '#88776C';
+                button.style.background = '#5A6573';
                 input.value = '';
                 
                 setTimeout(() => {
@@ -131,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe elements for subtle reveal
     document.querySelectorAll('.feature-item, .detail-item, .step-item, .story-content').forEach((el, index) => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = `opacity 0.8s ease ${index * 0.1}s, transform 0.8s ease ${index * 0.1}s`;
         observer.observe(el);
     });
 });

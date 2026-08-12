@@ -1,22 +1,26 @@
 /* ============================================
-   Wolkennest — Premium Babytragen Brand
-   Complete Rebrand
+   Wolkennest — Premium Baby Brand
+   Editorial Luxury Design System
    ============================================ */
 
 :root {
-    /* New Premium Color Palette */
-    --color-ivory: #F7F4EF;
-    --color-sand: #DDD3C7;
-    --color-stone: #B8AAA0;
-    --color-taupe: #88776C;
-    --color-espresso: #29231F;
-    --color-sage: #A7AA98;
+    /* New Premium Color Palette — Based on Product Photography */
+    --color-bg-primary: #F8F5F0;
+    --color-bg-warm: #FCFAF7;
+    --color-bg-secondary: #F1E9DE;
+    --color-accent-beige: #E5D6C4;
+    --color-border: #DDD1C3;
+    --color-text: #303840;
+    --color-text-light: #5A6573;
+    --color-text-muted: #8A94A0;
+    --color-navy: #2F4053;
+    --color-white: #FFFFFF;
     
     /* Typography */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     
-    /* Spacing */
+    /* Spacing — Generous */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
@@ -27,8 +31,13 @@
     --space-4xl: 12rem;
     
     /* Container */
-    --container-max: 1400px;
+    --container-max: 1440px;
     --container-narrow: 900px;
+    
+    /* Transitions */
+    --transition-fast: 200ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
 }
 
 /* Reset */
@@ -47,10 +56,11 @@ body {
     font-family: var(--font-sans);
     font-weight: 300;
     font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-espresso);
-    background-color: var(--color-ivory);
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg-primary);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -80,11 +90,15 @@ ul {
     width: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 var(--space-lg);
+    padding: 0 var(--space-xl);
+}
+
+.container-narrow {
+    max-width: var(--container-narrow);
 }
 
 /* ============================================
-   Header
+   Header — Minimal, Transparent
    ============================================ */
 .header {
     position: fixed;
@@ -93,11 +107,14 @@ ul {
     right: 0;
     z-index: 1000;
     padding: var(--space-md) 0;
-    transition: background-color 0.3s ease;
+    background: transparent;
+    transition: background-color var(--transition-normal), 
+                backdrop-filter var(--transition-normal);
 }
 
 .header.scrolled {
-    background-color: var(--color-ivory);
+    background: rgba(248, 245, 240, 0.95);
+    backdrop-filter: blur(10px);
 }
 
 .header-container {
@@ -106,15 +123,15 @@ ul {
     justify-content: space-between;
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 var(--space-lg);
+    padding: 0 var(--space-xl);
 }
 
 .logo {
     font-family: var(--font-serif);
     font-size: 1.75rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--color-espresso);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
 }
 
 /* Navigation */
@@ -127,21 +144,22 @@ ul {
 .nav-link {
     font-size: 0.8125rem;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-espresso);
+    color: var(--color-text);
+    padding: var(--space-xs) 0;
     position: relative;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -4px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--color-espresso);
-    transition: width 0.3s ease;
+    background: var(--color-navy);
+    transition: width var(--transition-normal);
 }
 
 .nav-link:hover::after {
@@ -156,13 +174,18 @@ ul {
 }
 
 .icon-btn {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-espresso);
+    color: var(--color-text);
     position: relative;
+    transition: color var(--transition-fast);
+}
+
+.icon-btn:hover {
+    color: var(--color-navy);
 }
 
 .icon-btn svg {
@@ -172,12 +195,12 @@ ul {
 
 .cart-btn .cart-count {
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 4px;
+    right: 4px;
     width: 16px;
     height: 16px;
-    background: var(--color-espresso);
-    color: var(--color-ivory);
+    background: var(--color-navy);
+    color: var(--color-bg-warm);
     font-size: 0.625rem;
     font-weight: 500;
     border-radius: 50%;
@@ -196,18 +219,19 @@ ul {
 .menu-toggle span {
     display: block;
     height: 1px;
-    background: var(--color-espresso);
-    transition: transform 0.3s ease;
+    background: var(--color-text);
+    transition: transform var(--transition-normal);
 }
 
 /* ============================================
-   Hero — Fullscreen
+   Hero — Editorial Fullscreen
    ============================================ */
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    background: var(--color-bg-warm);
 }
 
 .hero-image {
@@ -223,80 +247,140 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 600px;
-    padding: calc(80px + var(--space-3xl)) var(--space-xl) var(--space-3xl);
-    margin-left: 5%;
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: calc(100px + var(--space-3xl)) var(--space-xl) var(--space-3xl);
+    text-align: center;
+}
+
+.hero-eyebrow {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
 }
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-size: clamp(3.5rem, 10vw, 8rem);
     font-weight: 400;
     line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: var(--space-md);
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin-bottom: var(--space-lg);
 }
 
 .hero-subtitle {
     font-size: 1.125rem;
     font-weight: 300;
-    max-width: 420px;
-    margin-bottom: var(--space-xl);
-    line-height: 1.5;
+    color: var(--color-text-light);
+    max-width: 480px;
+    margin: 0 auto var(--space-xl);
+    line-height: 1.6;
 }
 
 .hero-note {
     font-size: 0.8125rem;
-    color: var(--color-taupe);
+    color: var(--color-text-muted);
     margin-top: var(--space-md);
 }
 
 /* ============================================
-   Buttons
+   Buttons — Elegant, Restrained
    ============================================ */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: var(--space-sm) var(--space-lg);
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-weight: 400;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: all var(--transition-fast);
+    border-radius: 2px;
 }
 
 .btn-primary {
-    background: var(--color-espresso);
-    color: var(--color-ivory);
+    background: var(--color-navy);
+    color: var(--color-bg-warm);
 }
 
 .btn-primary:hover {
-    background: var(--color-taupe);
+    background: var(--color-text);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-navy);
+    color: var(--color-navy);
 }
 
 .btn-large {
     padding: var(--space-md) var(--space-xl);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
 }
 
 /* ============================================
-   Product Section
+   Section Headers — Editorial
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.section-eyebrow {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+}
+
+/* ============================================
+   Product Section — Editorial Layout
    ============================================ */
 .product-section {
     padding: var(--space-4xl) 0;
+    background: var(--color-bg-warm);
 }
 
 .product-showcase {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: var(--space-3xl);
     align-items: center;
+}
+
+.product-image-main {
+    background: var(--color-bg-secondary);
+    padding: var(--space-xl);
 }
 
 .product-image-main img {
@@ -306,7 +390,7 @@ ul {
 }
 
 .product-info {
-    max-width: 480px;
+    max-width: 440px;
 }
 
 .product-label {
@@ -315,7 +399,7 @@ ul {
     font-weight: 400;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-taupe);
+    color: var(--color-text-muted);
     margin-bottom: var(--space-sm);
 }
 
@@ -324,30 +408,35 @@ ul {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 400;
     margin-bottom: var(--space-xs);
+    line-height: 1.1;
 }
 
 .product-tagline {
     font-size: 1.125rem;
     font-weight: 300;
-    color: var(--color-taupe);
-    margin-bottom: var(--space-lg);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xl);
 }
 
 .product-features {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
 }
 
 .product-features li {
     font-size: 0.9375rem;
-    padding: var(--space-xs) 0;
-    border-bottom: 1px solid var(--color-sand);
+    padding: var(--space-sm) 0;
+    color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .product-price {
     font-family: var(--font-serif);
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 400;
     margin-bottom: var(--space-lg);
+    color: var(--color-text);
 }
 
 .color-selector {
@@ -356,8 +445,11 @@ ul {
 
 .color-label {
     display: block;
-    font-size: 0.8125rem;
-    color: var(--color-taupe);
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
     margin-bottom: var(--space-sm);
 }
 
@@ -367,58 +459,52 @@ ul {
 }
 
 .color-swatch {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 .color-swatch:hover,
 .color-swatch.active {
-    border-color: var(--color-espresso);
+    border-color: var(--color-text);
     transform: scale(1.1);
 }
 
 /* ============================================
-   Brand Statement
+   Brand Statement — Large, Airy
    ============================================ */
 .brand-statement {
     padding: var(--space-4xl) 0;
     text-align: center;
-    background: var(--color-sand);
+    background: var(--color-bg-primary);
 }
 
 .statement-text {
     font-family: var(--font-serif);
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    max-width: 900px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    max-width: 800px;
     margin: 0 auto;
+    color: var(--color-text);
 }
 
 /* ============================================
-   Features Section
+   Features Section — Editorial Grid
    ============================================ */
 .features-section {
     padding: var(--space-4xl) 0;
-}
-
-.section-title {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: var(--space-3xl);
+    background: var(--color-bg-primary);
 }
 
 .features-grid {
     display: flex;
     flex-direction: column;
-    gap: var(--space-3xl);
+    gap: var(--space-4xl);
 }
 
 .feature-item {
@@ -436,6 +522,11 @@ ul {
     direction: ltr;
 }
 
+.feature-image {
+    background: var(--color-bg-secondary);
+    padding: var(--space-lg);
+}
+
 .feature-image img {
     width: 100%;
     aspect-ratio: 4/5;
@@ -444,39 +535,43 @@ ul {
 
 .feature-content {
     max-width: 400px;
+    padding: var(--space-xl);
 }
 
 .feature-content h3 {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
+    line-height: 1.1;
 }
 
 .feature-content p {
     font-size: 1rem;
-    color: var(--color-taupe);
-    line-height: 1.6;
+    color: var(--color-text-light);
+    line-height: 1.7;
 }
 
 /* ============================================
-   Lifestyle Section
+   Lifestyle Section — Full Bleed
    ============================================ */
 .lifestyle-section {
     width: 100%;
+    background: var(--color-bg-secondary);
 }
 
 .lifestyle-image img {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     object-fit: cover;
 }
 
 /* ============================================
-   Details Section
+   Details Section — Minimal Grid
    ============================================ */
 .details-section {
     padding: var(--space-4xl) 0;
+    background: var(--color-bg-warm);
 }
 
 .details-grid {
@@ -487,13 +582,15 @@ ul {
 
 .detail-item {
     text-align: center;
+    padding: var(--space-xl);
+    background: var(--color-bg-primary);
 }
 
 .detail-item img {
     width: 100%;
-    aspect-ratio: 4/5;
+    aspect-ratio: 1;
     object-fit: cover;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .detail-item h3 {
@@ -505,55 +602,59 @@ ul {
 
 .detail-item p {
     font-size: 0.9375rem;
-    color: var(--color-taupe);
+    color: var(--color-text-light);
 }
 
 /* ============================================
-   Guide Section
+   Guide Section — Steps
    ============================================ */
 .guide-section {
     padding: var(--space-4xl) 0;
-    background: var(--color-sand);
+    background: var(--color-bg-secondary);
 }
 
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .step-item {
     text-align: center;
+    padding: var(--space-xl);
 }
 
 .step-number {
     display: block;
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 300;
-    color: var(--color-stone);
-    margin-bottom: var(--space-sm);
+    color: var(--color-border);
+    margin-bottom: var(--space-md);
+    line-height: 1;
 }
 
 .step-item h3 {
     font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-sm);
 }
 
 .step-item p {
     font-size: 0.9375rem;
-    color: var(--color-taupe);
+    color: var(--color-text-light);
+    line-height: 1.6;
 }
 
 /* ============================================
-   Materials Section
+   Materials Section — Split Layout
    ============================================ */
 .materials-section {
     padding: var(--space-4xl) 0;
+    background: var(--color-bg-primary);
 }
 
 .materials-content {
@@ -565,13 +666,18 @@ ul {
 
 .materials-text .section-title {
     text-align: left;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .materials-text p {
     font-size: 1.0625rem;
-    line-height: 1.7;
-    color: var(--color-taupe);
+    line-height: 1.8;
+    color: var(--color-text-light);
+}
+
+.materials-image {
+    background: var(--color-bg-secondary);
+    padding: var(--space-lg);
 }
 
 .materials-image img {
@@ -581,27 +687,28 @@ ul {
 }
 
 /* ============================================
-   Safety Section
+   Safety Section — Centered Statement
    ============================================ */
 .safety-section {
     padding: var(--space-4xl) 0;
     text-align: center;
-    background: var(--color-ivory);
+    background: var(--color-bg-warm);
 }
 
 .safety-text {
     max-width: 600px;
     margin: var(--space-lg) auto 0;
     font-size: 1.0625rem;
-    color: var(--color-taupe);
-    line-height: 1.7;
+    color: var(--color-text-light);
+    line-height: 1.8;
 }
 
 /* ============================================
-   Story Section
+   Story Section — Editorial Layout
    ============================================ */
 .story-section {
     padding: var(--space-4xl) 0;
+    background: var(--color-bg-primary);
 }
 
 .story-grid {
@@ -611,10 +718,20 @@ ul {
     align-items: center;
 }
 
+.story-image {
+    background: var(--color-bg-secondary);
+    padding: var(--space-lg);
+}
+
 .story-image img {
     width: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
+}
+
+.story-content {
+    max-width: 480px;
+    padding: var(--space-xl);
 }
 
 .story-content .section-title {
@@ -624,94 +741,99 @@ ul {
 
 .story-content p {
     font-size: 1.0625rem;
-    line-height: 1.7;
-    color: var(--color-taupe);
+    line-height: 1.8;
+    color: var(--color-text-light);
     margin-bottom: var(--space-md);
 }
 
 /* ============================================
-   Newsletter Section
+   Newsletter Section — Elegant
    ============================================ */
 .newsletter-section {
     padding: var(--space-4xl) 0;
-    background: var(--color-sand);
+    background: var(--color-bg-secondary);
+    text-align: center;
 }
 
 .newsletter-content {
-    max-width: 600px;
+    max-width: 480px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .newsletter-content h2 {
     font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 400;
     margin-bottom: var(--space-sm);
 }
 
 .newsletter-content > p {
-    font-size: 1.0625rem;
-    color: var(--color-taupe);
+    font-size: 1rem;
+    color: var(--color-text-light);
     margin-bottom: var(--space-xl);
 }
 
 .newsletter-form {
     display: flex;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
     margin-bottom: var(--space-sm);
 }
 
 .newsletter-form input {
     flex: 1;
     padding: var(--space-md);
-    font-size: 1rem;
-    border: 1px solid var(--color-stone);
-    background: var(--color-ivory);
+    font-size: 0.9375rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-warm);
     outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.newsletter-form input:focus {
+    border-color: var(--color-navy);
 }
 
 .newsletter-form input::placeholder {
-    color: var(--color-stone);
+    color: var(--color-text-muted);
 }
 
 .newsletter-note {
     font-size: 0.8125rem;
-    color: var(--color-taupe);
+    color: var(--color-text-muted);
 }
 
 /* ============================================
-   Footer
+   Footer — Premium, Restrained
    ============================================ */
 .footer {
-    padding: var(--space-2xl) 0 var(--space-lg);
-    background: var(--color-espresso);
-    color: var(--color-ivory);
+    padding: var(--space-3xl) 0 var(--space-lg);
+    background: var(--color-navy);
+    color: var(--color-bg-warm);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-2xl);
-    margin-bottom: var(--space-2xl);
+    gap: var(--space-3xl);
+    margin-bottom: var(--space-3xl);
 }
 
 .footer-brand .logo {
-    color: var(--color-ivory);
+    color: var(--color-bg-warm);
     margin-bottom: var(--space-xs);
 }
 
 .footer-tagline {
     font-size: 0.9375rem;
-    color: var(--color-stone);
+    color: rgba(252, 250, 247, 0.6);
 }
 
 .footer-nav h4 {
     font-size: 0.6875rem;
     font-weight: 400;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-stone);
+    color: rgba(252, 250, 247, 0.5);
     margin-bottom: var(--space-md);
 }
 
@@ -723,12 +845,12 @@ ul {
 
 .footer-nav a {
     font-size: 0.9375rem;
-    color: var(--color-ivory);
-    transition: color 0.3s ease;
+    color: var(--color-bg-warm);
+    transition: opacity var(--transition-fast);
 }
 
 .footer-nav a:hover {
-    color: var(--color-sand);
+    opacity: 0.7;
 }
 
 .footer-bottom {
@@ -736,7 +858,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     padding-top: var(--space-xl);
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(252, 250, 247, 0.1);
 }
 
 .footer-legal {
@@ -746,23 +868,31 @@ ul {
 
 .footer-legal a {
     font-size: 0.8125rem;
-    color: var(--color-stone);
-    transition: color 0.3s ease;
+    color: rgba(252, 250, 247, 0.5);
+    transition: color var(--transition-fast);
 }
 
 .footer-legal a:hover {
-    color: var(--color-ivory);
+    color: var(--color-bg-warm);
 }
 
 .copyright {
     font-size: 0.8125rem;
-    color: var(--color-stone);
+    color: rgba(252, 250, 247, 0.5);
 }
 
 /* ============================================
-   Responsive
+   Responsive — Mobile First
    ============================================ */
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--space-lg);
+    }
+    
+    .header-container {
+        padding: 0 var(--space-lg);
+    }
+    
     .nav-menu {
         display: none;
     }
@@ -772,14 +902,7 @@ ul {
     }
     
     .hero-content {
-        margin: 0;
         padding: calc(80px + var(--space-2xl)) var(--space-lg) var(--space-2xl);
-        text-align: center;
-    }
-    
-    .hero-subtitle {
-        margin-left: auto;
-        margin-right: auto;
     }
     
     .product-showcase {
@@ -789,6 +912,7 @@ ul {
     
     .product-info {
         max-width: 100%;
+        padding: 0 var(--space-lg);
     }
     
     .feature-item {
@@ -798,6 +922,10 @@ ul {
     
     .feature-item.reverse {
         direction: ltr;
+    }
+    
+    .feature-content {
+        padding: var(--space-lg);
     }
     
     .details-grid {
@@ -822,6 +950,11 @@ ul {
         text-align: center;
     }
     
+    .materials-text,
+    .story-content {
+        padding: 0 var(--space-lg);
+    }
+    
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: var(--space-xl);
@@ -834,20 +967,16 @@ ul {
 
 @media (max-width: 768px) {
     :root {
-        --space-4xl: 6rem;
-        --space-3xl: 4rem;
-    }
-    
-    .hero {
-        min-height: 100vh;
+        --space-4xl: 5rem;
+        --space-3xl: 3rem;
     }
     
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.75rem;
     }
     
     .lifestyle-image img {
-        height: 50vh;
+        height: 60vh;
     }
     
     .newsletter-form {
@@ -857,6 +986,7 @@ ul {
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--space-xl);
     }
     
     .footer-brand {
@@ -879,11 +1009,6 @@ ul {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
-    outline: 2px solid var(--color-espresso);
+    outline: 2px solid var(--color-navy);
     outline-offset: 2px;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
 }
