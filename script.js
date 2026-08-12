@@ -1,39 +1,43 @@
 /**
- * Wolkennest — Premium Baby Lifestyle Brand
+ * Wolkennest — Premium Babytragen Brand
  * Minimal, elegant interactions
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation
-    const navToggle = document.querySelector('.nav-toggle');
+    // Header scroll behavior
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+    
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
             navMenu.classList.toggle('active');
             
-            // Animate hamburger
-            const lines = this.querySelectorAll('.nav-toggle-line');
+            const spans = this.querySelectorAll('span');
             if (!isExpanded) {
-                lines[0].style.transform = 'rotate(45deg) translateY(3.5px)';
-                lines[1].style.transform = 'rotate(-45deg) translateY(-3.5px)';
+                spans[0].style.transform = 'rotate(45deg) translateY(3.5px)';
+                spans[1].style.transform = 'rotate(-45deg) translateY(-3.5px)';
             } else {
-                lines[0].style.transform = 'none';
-                lines[1].style.transform = 'none';
+                spans[0].style.transform = 'none';
+                spans[1].style.transform = 'none';
             }
-        });
-        
-        // Close menu on link click
-        navMenu.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navToggle.setAttribute('aria-expanded', 'false');
-                navMenu.classList.remove('active');
-                const lines = navToggle.querySelectorAll('.nav-toggle-line');
-                lines[0].style.transform = 'none';
-                lines[1].style.transform = 'none';
-            });
         });
     }
     
@@ -45,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    const navHeight = document.querySelector('.nav').offsetHeight;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -56,22 +60,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Color swatch selection
+    const colorSwatches = document.querySelectorAll('.color-swatch');
+    colorSwatches.forEach(swatch => {
+        swatch.addEventListener('click', function() {
+            colorSwatches.forEach(s => s.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    
     // Cart functionality
-    const cartCount = document.querySelector('.nav-cart-count');
+    const cartCount = document.querySelector('.cart-count');
     let count = 0;
     
-    // Add to cart on product card click
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('click', function() {
-            count++;
-            if (cartCount) {
-                cartCount.textContent = count;
-                cartCount.style.transform = 'scale(1.2)';
-                setTimeout(() => {
-                    cartCount.style.transform = 'scale(1)';
-                }, 150);
-            }
-        });
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+        if (btn.textContent.includes('entdecken') || btn.textContent.includes('In den Warenkorb')) {
+            btn.addEventListener('click', function(e) {
+                if (this.textContent.includes('In den Warenkorb')) {
+                    e.preventDefault();
+                    count++;
+                    if (cartCount) {
+                        cartCount.textContent = count;
+                        cartCount.style.transform = 'scale(1.2)';
+                        setTimeout(() => {
+                            cartCount.style.transform = 'scale(1)';
+                        }, 150);
+                    }
+                }
+            });
+        }
     });
     
     // Newsletter form
@@ -79,13 +96,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const input = this.querySelector('.newsletter-input');
-            const button = this.querySelector('.newsletter-button');
+            const input = this.querySelector('input');
+            const button = this.querySelector('button');
             
             if (input.value) {
                 const originalText = button.textContent;
                 button.textContent = 'Angemeldet';
-                button.style.background = '#6B665E';
+                button.style.background = '#88776C';
                 input.value = '';
                 
                 setTimeout(() => {
@@ -112,10 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for subtle reveal
-    document.querySelectorAll('.category-card, .product-card, .trust-item, .story-content').forEach((el, index) => {
+    document.querySelectorAll('.feature-item, .detail-item, .step-item, .story-content').forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(el);
     });
 });

@@ -3,261 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolkennest — Geborgen von Anfang an</title>
-    <meta name="description" content="Wolkennest — Liebevoll ausgewählte Babyprodukte für die kostbarsten Momente. Von Eltern, für Eltern.">
+    <title>Wolkennest | Premium Babytragen für Nähe im Alltag</title>
+    <meta name="description" content="Wolkennest – Hochwertige Babytragen für Nähe, Komfort und euren gemeinsamen Alltag. Entwickelt von Eltern, für Eltern.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='%233D3A36' d='M50 20c-12 0-22 8-25 20-10 2-17 11-17 21 0 12 10 22 22 22h40c12 0 22-10 22-22 0-10-7-19-17-21-3-12-13-20-25-20z'/></svg>">
-    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path fill='%2329231F' d='M50 20c-12 0-22 8-25 20-10 2-17 11-17 21 0 12 10 22 22 22h40c12 0 22-10 22-22 0-10-7-19-17-21-3-12-13-20-25-20z'/></svg>">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Hauptnavigation">
-        <div class="nav-container">
-            <a href="#" class="nav-logo" aria-label="Wolkennest Startseite">
-                <span class="nav-logo-text">Wolkennest</span>
-            </a>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">Wolkennest</a>
             
-            <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-            </button>
+            <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+                <ul class="nav-menu">
+                    <li><a href="#produkt" class="nav-link">Babytragen</a></li>
+                    <li><a href="#warum" class="nav-link">Warum Wolkennest</a></li>
+                    <li><a href="#trageberatung" class="nav-link">Trageberatung</a></li>
+                    <li><a href="#geschichte" class="nav-link">Unsere Geschichte</a></li>
+                </ul>
+            </nav>
             
-            <ul class="nav-menu" id="nav-menu" role="menubar">
-                <li role="none"><a href="#kollektion" class="nav-link" role="menuitem">Shop</a></li>
-                <li role="none"><a href="#neuheiten" class="nav-link" role="menuitem">Neuheiten</a></li>
-                <li role="none"><a href="#unsere-welt" class="nav-link" role="menuitem">Unsere Welt</a></li>
-                <li role="none"><a href="#ueber-uns" class="nav-link" role="menuitem">Über uns</a></li>
-            </ul>
-            
-            <div class="nav-actions">
-                <a href="#" class="nav-action" aria-label="Suche">
-                    <svg viewBox="0 0 24 24" fill="none" class="nav-icon" aria-hidden="true">
-                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M20 20l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Suche">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="7"/>
+                        <path d="M20 20l-4.35-4.35"/>
                     </svg>
-                </a>
-                <a href="#" class="nav-action" aria-label="Account">
-                    <svg viewBox="0 0 24 24" fill="none" class="nav-icon" aria-hidden="true">
-                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </button>
+                <button class="icon-btn" aria-label="Account">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
                     </svg>
-                </a>
-                <a href="#" class="nav-action" aria-label="Warenkorb">
-                    <svg viewBox="0 0 24 24" fill="none" class="nav-icon" aria-hidden="true">
-                        <path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </button>
+                <button class="icon-btn cart-btn" aria-label="Warenkorb">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 6h15l-1.5 9h-12z"/>
                         <circle cx="9" cy="20" r="1" fill="currentColor"/>
                         <circle cx="18" cy="20" r="1" fill="currentColor"/>
-                        <path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L5 3H2"/>
                     </svg>
-                    <span class="nav-cart-count">0</span>
-                </a>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="hero">
-        <div class="hero-image-container">
-            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df4?w=1600&h=2000&fit=crop&q=85" 
-                 alt="Mutter hält schlafendes Baby im warmen Licht" 
-                 class="hero-image"
-                 fetchpriority="high">
-        </div>
-        <div class="hero-content">
-            <span class="hero-eyebrow">Willkommen bei Wolkennest</span>
-            <h1 class="hero-title">Geborgen von Anfang an.</h1>
-            <p class="hero-subtitle">Liebevoll ausgewählte Produkte für die kostbarsten Momente.</p>
-            <a href="#kollektion" class="hero-cta">Wolkennest entdecken</a>
         </div>
     </header>
 
-    <!-- Categories -->
-    <section id="kollektion" class="categories" aria-labelledby="categories-heading">
-        <div class="section-container">
-            <header class="section-header">
-                <span class="section-eyebrow">Unsere Kollektion</span>
-                <h2 id="categories-heading" class="section-title">Für jeden Moment</h2>
-            </header>
-            
-            <div class="categories-grid">
-                <a href="#" class="category-card">
-                    <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=900&h=1125&fit=crop&q=80" 
-                             alt="Baby schläft in weißer Bettwäsche" 
-                             class="category-image"
-                             loading="lazy">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df4?w=1920&h=1080&fit=crop&q=90" 
+                 alt="Mutter trägt Baby in Wolkennest Trage" 
+                 fetchpriority="high">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Ganz nah.<br>Überall.</h1>
+            <p class="hero-subtitle">Eine Babytrage, entwickelt für Nähe, Komfort und euren gemeinsamen Alltag.</p>
+            <a href="#produkt" class="btn btn-primary">Babytragen entdecken</a>
+            <p class="hero-note">Von Geburt an gedacht. Für jeden Tag gemacht.</p>
+        </div>
+    </section>
+
+    <!-- Produkt -->
+    <section class="product-section" id="produkt">
+        <div class="container">
+            <div class="product-showcase">
+                <div class="product-image-main">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&h=1000&fit=crop&q=85" 
+                         alt="Wolkennest ONE Babytrage in Oat">
+                </div>
+                <div class="product-info">
+                    <span class="product-label">Unsere erste Trage</span>
+                    <h2 class="product-name">Wolkennest ONE</h2>
+                    <p class="product-tagline">Eine Trage. Vom ersten Tag an.</p>
+                    <ul class="product-features">
+                        <li>Ergonomischer Sitz</li>
+                        <li>Individuell einstellbar</li>
+                        <li>Weiche, hochwertige Materialien</li>
+                    </ul>
+                    <div class="product-price">149 €</div>
+                    <div class="color-selector">
+                        <span class="color-label">Farbe:</span>
+                        <div class="color-swatches">
+                            <button class="color-swatch active" style="background-color: #D4C4B0;" aria-label="Oat"></button>
+                            <button class="color-swatch" style="background-color: #8B7E74;" aria-label="Stone"></button>
+                            <button class="color-swatch" style="background-color: #A7AA98;" aria-label="Sage"></button>
+                        </div>
                     </div>
-                    <div class="category-content">
-                        <h3 class="category-title">Schlafen</h3>
-                    </div>
-                </a>
-                
-                <a href="#" class="category-card">
-                    <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=900&h=1125&fit=crop&q=80" 
-                             alt="Vater mit Baby im Tragetuch beim Spaziergang" 
-                             class="category-image"
-                             loading="lazy">
-                    </div>
-                    <div class="category-content">
-                        <h3 class="category-title">Unterwegs</h3>
-                    </div>
-                </a>
-                
-                <a href="#" class="category-card">
-                    <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=900&h=1125&fit=crop&q=80" 
-                             alt="Baby spielt mit Holzspielzeug" 
-                             class="category-image"
-                             loading="lazy">
-                    </div>
-                    <div class="category-content">
-                        <h3 class="category-title">Spielen</h3>
-                    </div>
-                </a>
+                    <button class="btn btn-primary btn-large">Wolkennest ONE entdecken</button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Brand Statement -->
-    <section class="brand-statement" aria-labelledby="statement-heading">
-        <div class="section-container">
-            <h2 id="statement-heading" class="statement-text">Für kleine Menschen.<br>Mit großer Sorgfalt ausgewählt.</h2>
+    <section class="brand-statement">
+        <div class="container">
+            <h2 class="statement-text">Nähe lässt sich nicht messen.<br>Aber man kann sie spüren.</h2>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="products" aria-labelledby="products-heading">
-        <div class="section-container">
-            <header class="section-header">
-                <span class="section-eyebrow">Ausgewählte Lieblinge</span>
-                <h2 id="products-heading" class="section-title">Unsere Favoriten</h2>
-            </header>
+    <!-- Warum Wolkennest -->
+    <section class="features-section" id="warum">
+        <div class="container">
+            <h2 class="section-title">Entwickelt für euch beide.</h2>
             
-            <div class="products-grid">
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=800&fit=crop&q=80" 
-                             alt="Merino-Wolle Schlafsack in Creme" 
-                             class="product-img"
-                             loading="lazy">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=600&h=750&fit=crop&q=85" 
+                             alt="Vater mit Baby in Trage">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Merino-Schlafsack</h3>
-                        <p class="product-variant">Naturweiß</p>
-                        <p class="product-price">89 €</p>
+                    <div class="feature-content">
+                        <h3>Nähe</h3>
+                        <p>Das Baby bleibt dort, wo es sich am sichersten fühlt – ganz nah bei dir.</p>
                     </div>
-                </article>
+                </div>
                 
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1618238273998-8e7f6e3f4b1e?w=600&h=800&fit=crop&q=80" 
-                             alt="Weiches Musselin-Tuch-Set in Naturtönen" 
-                             class="product-img"
-                             loading="lazy">
+                <div class="feature-item reverse">
+                    <div class="feature-content">
+                        <h3>Komfort</h3>
+                        <p>Gewichtsverteilung und Einstellmöglichkeiten sollen Eltern auch bei längerer Nutzung unterstützen.</p>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Musselin-Tuch-Set</h3>
-                        <p class="product-variant">3 Stück</p>
-                        <p class="product-price">34 €</p>
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&h=750&fit=crop&q=85" 
+                             alt="Detail der Trage">
                     </div>
-                </article>
+                </div>
                 
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&h=800&fit=crop&q=80" 
-                             alt="Handgefertigter Holz-Greifling aus Buche" 
-                             class="product-img"
-                             loading="lazy">
+                <div class="feature-item">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&q=85" 
+                             alt="Spaziergang mit Baby">
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Holz-Greifling</h3>
-                        <p class="product-variant">Buche natur</p>
-                        <p class="product-price">28 €</p>
+                    <div class="feature-content">
+                        <h3>Alltag</h3>
+                        <p>Schnell angelegt und gemacht für Spaziergänge, Reisen und alles dazwischen.</p>
                     </div>
-                </article>
-            </div>
-            
-            <div class="products-footer">
-                <a href="#" class="text-link">Alle Produkte</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About / Story -->
-    <section id="ueber-uns" class="story" aria-labelledby="story-heading">
-        <div class="section-container">
+    <!-- Lifestyle -->
+    <section class="lifestyle-section">
+        <div class="lifestyle-image">
+            <img src="https://images.unsplash.com/photo-1544367563-12123d8965cd?w=1920&h=1080&fit=crop&q=90" 
+                 alt="Eltern mit Baby in urbaner Umgebung">
+        </div>
+    </section>
+
+    <!-- Produktdetails -->
+    <section class="details-section">
+        <div class="container">
+            <h2 class="section-title">Jedes Detail zählt.</h2>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=400&h=500&fit=crop&q=85" 
+                         alt="Stoffdetail">
+                    <h3>Stoff</h3>
+                    <p>Atmungsaktiv und weich – entwickelt für langes Tragen.</p>
+                </div>
+                <div class="detail-item">
+                    <img src="https://images.unsplash.com/photo-1618238273998-8e7f6e3f4b1e?w=400&h=500&fit=crop&q=85" 
+                         alt="Schultergurte">
+                    <h3>Schultergurte</h3>
+                    <p>Gepolstert und verstellbar für optimalen Komfort.</p>
+                </div>
+                <div class="detail-item">
+                    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df4?w=400&h=500&fit=crop&q=85" 
+                         alt="Verschlüsse">
+                    <h3>Verschlüsse</h3>
+                    <p>Sicher und intuitiv zu bedienen – auch mit einer Hand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anleitung -->
+    <section class="guide-section" id="trageberatung">
+        <div class="container">
+            <h2 class="section-title">So funktioniert es.</h2>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <span class="step-number">01</span>
+                    <h3>Anlegen</h3>
+                    <p>Trage um die Hüfte schnallen und Schultergurte überkreuzen.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">02</span>
+                    <h3>Anpassen</h3>
+                    <p>Baby hineinsetzen und Trage an die Körpergröße anpassen.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">03</span>
+                    <h3>Nah sein</h3>
+                    <p>Fertig. Genießt die Nähe und habt beide Hände frei.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materialien -->
+    <section class="materials-section">
+        <div class="container">
+            <div class="materials-content">
+                <div class="materials-text">
+                    <h2 class="section-title">Was dein Baby berührt, ist uns wichtig.</h2>
+                    <p>Wir legen höchsten Wert auf Materialien, die sanft zur Haut sind und gleichzeitig strapazierfähig genug für den täglichen Gebrauch. Jeder Stoff wird sorgfältig ausgewählt und getestet.</p>
+                </div>
+                <div class="materials-image">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop&q=85" 
+                         alt="Materialien Detail">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sicherheit -->
+    <section class="safety-section">
+        <div class="container">
+            <h2 class="section-title">Für das Wichtigste gemacht.</h2>
+            <p class="safety-text">Jede Wolkennest Trage wird nach höchsten Standards gefertigt. Sicherheit und Qualität stehen an erster Stelle – bei jedem einzelnen Produkt.</p>
+        </div>
+    </section>
+
+    <!-- Geschichte -->
+    <section class="story-section" id="geschichte">
+        <div class="container">
             <div class="story-grid">
                 <div class="story-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&q=80" 
-                         alt="Die Gründer von Wolkennest" 
-                         class="story-img"
-                         loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&q=85" 
+                         alt="Die Gründer von Wolkennest">
                 </div>
                 <div class="story-content">
-                    <span class="story-eyebrow">Unsere Geschichte</span>
-                    <h2 id="story-heading" class="story-title">Aus dem Wunsch nach etwas Besserem.</h2>
-                    <div class="story-text">
-                        <p>Wolkennest entstand, als wir selbst Väter wurden. Wir suchten Produkte, die wirklich gut sind – nicht nur schön aussehen. Die erste Zeit mit unseren Kindern hat uns gezeigt, wie wichtig Qualität, Sicherheit und echte Werte sind.</p>
-                        <p>Heute teilen wir unsere Entdeckungen mit anderen Familien. Jedes Produkt in unserem Sortiment haben wir selbst getestet und mit gutem Gewissen ausgewählt.</p>
-                    </div>
+                    <h2 class="section-title">Entstanden aus dem echten Leben.</h2>
+                    <p>Wolkennest entstand aus einer einfachen Frage: Warum sollte etwas, das wir täglich für unsere Kinder nutzen, nicht gleichzeitig sicher, komfortabel und schön sein?</p>
+                    <p>Aus unserer eigenen Erfahrung als Väter entstand der Wunsch, Produkte zu schaffen, die wir selbst gerne jeden Tag verwenden würden.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust -->
-    <section class="trust" aria-label="Vertrauensmerkmale">
-        <div class="trust-container">
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
-                    <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <span>Sichere Zahlung</span>
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
-                    <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <span>30 Tage Rückgabe</span>
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-                <span>Versand aus Deutschland</span>
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/>
-                    <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="9" cy="9" r="1" fill="currentColor"/>
-                    <circle cx="15" cy="9" r="1" fill="currentColor"/>
-                </svg>
-                <span>Persönlicher Kundenservice</span>
             </div>
         </div>
     </section>
 
     <!-- Newsletter -->
-    <section class="newsletter" aria-labelledby="newsletter-heading">
-        <div class="section-container">
+    <section class="newsletter-section">
+        <div class="container">
             <div class="newsletter-content">
-                <h2 id="newsletter-heading" class="newsletter-title">Ein Platz im Wolkennest.</h2>
-                <p class="newsletter-text">Neuheiten, Inspiration und ausgewählte Geschichten für die erste gemeinsame Zeit.</p>
-                <form class="newsletter-form" action="#" method="POST">
-                    <label for="email" class="visually-hidden">E-Mail-Adresse</label>
-                    <input type="email" id="email" name="email" class="newsletter-input" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
-                    <button type="submit" class="newsletter-button">Anmelden</button>
+                <h2>Willkommen im Wolkennest.</h2>
+                <p>Gedanken, Neuheiten und Inspiration für die erste gemeinsame Zeit.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Deine E-Mail-Adresse" required>
+                    <button type="submit" class="btn btn-primary">Dabei sein</button>
                 </form>
                 <p class="newsletter-note">Als Willkommensgeschenk erhältst du 10% Rabatt auf deine erste Bestellung.</p>
             </div>
@@ -265,45 +272,39 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="section-container">
+    <footer class="footer">
+        <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="footer-logo" aria-label="Wolkennest">
-                        <span class="footer-logo-text">Wolkennest</span>
-                    </a>
-                    <p class="footer-tagline">Geborgen von Anfang an.</p>
+                    <span class="logo">Wolkennest</span>
+                    <p class="footer-tagline">Ganz nah. Überall.</p>
                 </div>
                 
-                <nav class="footer-nav" aria-label="Shop Navigation">
-                    <h3 class="footer-nav-title">Shop</h3>
-                    <ul class="footer-nav-list">
-                        <li><a href="#">Schlafen</a></li>
-                        <li><a href="#">Unterwegs</a></li>
-                        <li><a href="#">Spielen</a></li>
-                        <li><a href="#">Pflege</a></li>
-                        <li><a href="#">Essen</a></li>
+                <div class="footer-nav">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Babytragen</a></li>
+                        <li><a href="#">Zubehör</a></li>
                     </ul>
-                </nav>
+                </div>
                 
-                <nav class="footer-nav" aria-label="Service Navigation">
-                    <h3 class="footer-nav-title">Service</h3>
-                    <ul class="footer-nav-list">
-                        <li><a href="#">Versand</a></li>
-                        <li><a href="#">Retouren</a></li>
-                        <li><a href="#">Größenberater</a></li>
+                <div class="footer-nav">
+                    <h4>Hilfe</h4>
+                    <ul>
+                        <li><a href="#">Trageberatung</a></li>
                         <li><a href="#">FAQ</a></li>
-                    </ul>
-                </nav>
-                
-                <nav class="footer-nav" aria-label="Unternehmen Navigation">
-                    <h3 class="footer-nav-title">Unternehmen</h3>
-                    <ul class="footer-nav-list">
-                        <li><a href="#ueber-uns">Über uns</a></li>
-                        <li><a href="#unsere-welt">Unsere Welt</a></li>
+                        <li><a href="#">Versand & Rückgabe</a></li>
                         <li><a href="#">Kontakt</a></li>
                     </ul>
-                </nav>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Wolkennest</h4>
+                    <ul>
+                        <li><a href="#">Über uns</a></li>
+                        <li><a href="#">Unsere Werte</a></li>
+                    </ul>
+                </div>
             </div>
             
             <div class="footer-bottom">
@@ -313,7 +314,7 @@
                     <a href="#">AGB</a>
                     <a href="#">Widerruf</a>
                 </div>
-                <p class="footer-copyright">© 2026 Wolkennest</p>
+                <p class="copyright">© 2026 Wolkennest</p>
             </div>
         </div>
     </footer>
