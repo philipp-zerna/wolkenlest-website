@@ -3,234 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolkenlest – Sanfte Produkte für dein Baby</title>
+    <title>Wolkennest — Geborgen von Anfang an</title>
+    <meta name="description" content="Wolkennest — Liebevoll ausgewählte Babyprodukte für die kostbarsten Momente. Von Eltern, für Eltern.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">☁️</span>
-                <span class="logo-text">Wolkenlest</span>
+    <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Wolkennest Startseite">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20 8C15 8 11 11.5 10 16C6 16.5 3 20 3 24C3 29 7 33 12 33H28C33 33 37 29 37 24C37 20 34 16.5 30 16C29 11.5 25 8 20 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-logo-text">Wolkennest</span>
             </a>
-            <button class="nav-toggle" aria-label="Menü öffnen">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
             </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Start</a></li>
-                <li><a href="#produkte" class="nav-link">Produkte</a></li>
-                <li><a href="#ueber-uns" class="nav-link">Über uns</a></li>
-                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
-                <li><a href="#" class="nav-link cart-link">
-                    <span class="cart-icon">🛒</span>
-                    <span class="cart-count">0</span>
-                </a></li>
+            
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="#kollektion" class="nav-link" role="menuitem">Kollektion</a></li>
+                <li role="none"><a href="#unsere-geschichte" class="nav-link" role="menuitem">Über uns</a></li>
+                <li role="none"><a href="#kontakt" class="nav-link" role="menuitem">Kontakt</a></li>
             </ul>
+            
+            <a href="#" class="nav-cart" aria-label="Warenkorb">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-cart-icon" aria-hidden="true">
+                    <path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="9" cy="20" r="1" fill="currentColor"/>
+                    <circle cx="18" cy="20" r="1" fill="currentColor"/>
+                    <path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-cart-count">0</span>
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-decoration"></div>
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-tagline">Sanft wie eine Wolke</span>
-                <h1 class="hero-title">Produkte, die dein Baby lieben wird</h1>
-                <p class="hero-subtitle">Bei Wolkenlest findest du liebevoll ausgewählte Babyprodukte in höchster Qualität – schadstofffrei, nachhaltig und wunderschön.</p>
-                <div class="hero-buttons">
-                    <a href="#produkte" class="btn btn-primary">Jetzt entdecken</a>
-                    <a href="#ueber-uns" class="btn btn-secondary">Mehr erfahren</a>
-                </div>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-image-container">
+            <div class="hero-image-placeholder" role="img" aria-label="Sanftes Baby in natürlicher Umgebung">
+                <span class="hero-image-text">Lifestyle Fotografie</span>
             </div>
-            <div class="hero-image">
-                <div class="hero-image-wrapper">
-                    <div class="hero-placeholder">
-                        <span>🍼</span>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Geborgen<br>von Anfang an.</h1>
+            <p class="hero-subtitle">Liebevoll ausgewählte Produkte für die kostbarsten Momente.</p>
+            <a href="#kollektion" class="hero-cta">Wolkennest entdecken</a>
+        </div>
+    </header>
+
+    <!-- Trust Line -->
+    <section class="trust" aria-label="Vertrauensmerkmale">
+        <div class="trust-container">
+            <span class="trust-item">Schadstoffgeprüft</span>
+            <span class="trust-separator" aria-hidden="true">·</span>
+            <span class="trust-item">Sorgfältig ausgewählt</span>
+            <span class="trust-separator" aria-hidden="true">·</span>
+            <span class="trust-item">Nachhaltige Materialien</span>
+            <span class="trust-separator" aria-hidden="true">·</span>
+            <span class="trust-item">Für die Kleinsten gemacht</span>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌿</div>
-                    <h3>100% Bio</h3>
-                    <p>Nur die besten natürlichen Materialien für dein Baby</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💝</div>
-                    <h3>Mit Liebe</h3>
-                    <p>Jedes Produkt wird von uns persönlich ausgewählt</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🚚</div>
-                    <h3>Kostenloser Versand</h3>
-                    <p>Ab 50€ versenden wir deutschlandweit kostenlos</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>30 Tage Rückgabe</h3>
-                    <p>Nicht zufrieden? Einfach zurückschicken</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kategorien -->
-    <section id="produkte" class="categories">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Unser Sortiment</span>
-                <h2 class="section-title">Entdecke unsere Kategorien</h2>
-                <p class="section-subtitle">Alles, was dein Baby braucht – auf einen Blick</p>
-            </div>
+    <!-- Categories -->
+    <section id="kollektion" class="categories" aria-labelledby="categories-heading">
+        <div class="section-container">
+            <header class="section-header">
+                <h2 id="categories-heading" class="section-title">Unsere Kollektion</h2>
+                <p class="section-intro">Alles, was dein Baby braucht — reduziert auf das Wesentliche.</p>
+            </header>
+            
             <div class="categories-grid">
-                <div class="category-card category-large">
-                    <div class="category-content">
-                        <span class="category-icon">👶</span>
-                        <h3>Babykleidung</h3>
-                        <p>Weiche Bio-Baumwolle für zarte Babyhaut</p>
-                        <a href="#" class="category-link">Entdecken →</a>
+                <a href="#" class="category-card category-large">
+                    <div class="category-image-placeholder">
+                        <span>Schlafen</span>
                     </div>
-                </div>
-                <div class="category-card">
                     <div class="category-content">
-                        <span class="category-icon">🧸</span>
-                        <h3>Spielzeug</h3>
-                        <p>Lernen mit Freude</p>
+                        <h3 class="category-title">Schlafen</h3>
+                        <p class="category-description">Ruhige Nächte, süße Träume</p>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-image-placeholder">
+                        <span>Unterwegs</span>
+                    </div>
                     <div class="category-content">
-                        <span class="category-icon">🍼</span>
-                        <h3>Ernährung</h3>
-                        <p>Alles fürs Mahlzeit</p>
+                        <h3 class="category-title">Unterwegs</h3>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-image-placeholder">
+                        <span>Spielen</span>
+                    </div>
                     <div class="category-content">
-                        <span class="category-icon">🛁</span>
-                        <h3>Pflege</h3>
-                        <p>Sanfte Pflegeprodukte</p>
+                        <h3 class="category-title">Spielen</h3>
                     </div>
-                </div>
-                <div class="category-card">
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-image-placeholder">
+                        <span>Pflege</span>
+                    </div>
                     <div class="category-content">
-                        <span class="category-icon">🛏️</span>
-                        <h3>Schlafen</h3>
-                        <p>Süße Träume</p>
+                        <h3 class="category-title">Pflege</h3>
                     </div>
-                </div>
+                </a>
+                
+                <a href="#" class="category-card">
+                    <div class="category-image-placeholder">
+                        <span>Essen</span>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">Essen</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Beliebte Produkte -->
-    <section class="products">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Bestseller</span>
-                <h2 class="section-title">Beliebte Produkte</h2>
-                <p class="section-subtitle">Diese Artikel lieben unsere Kunden besonders</p>
-            </div>
+    <!-- Featured Products -->
+    <section class="products" aria-labelledby="products-heading">
+        <div class="section-container">
+            <header class="section-header">
+                <h2 id="products-heading" class="section-title">Ausgewählte Lieblinge</h2>
+            </header>
+            
             <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-badge">Bestseller</div>
+                <article class="product-card">
                     <div class="product-image">
-                        <div class="product-placeholder">👕</div>
+                        <div class="product-image-placeholder">
+                            <span>Produktfoto</span>
+                        </div>
+                        <span class="product-badge">Bestseller</span>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Kleidung</span>
-                        <h3 class="product-name">Bio-Baumwoll Body 3er Set</h3>
-                        <div class="product-rating">⭐⭐⭐⭐⭐ <span>(127)</span></div>
-                        <div class="product-price">
-                            <span class="price-current">29,99 €</span>
-                        </div>
-                        <button class="btn btn-add">In den Warenkorb</button>
+                        <h3 class="product-name">Merino-Schlafsack</h3>
+                        <p class="product-price">89 €</p>
                     </div>
-                </div>
-                <div class="product-card">
+                </article>
+                
+                <article class="product-card">
                     <div class="product-image">
-                        <div class="product-placeholder">🧸</div>
+                        <div class="product-image-placeholder">
+                            <span>Produktfoto</span>
+                        </div>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Spielzeug</span>
-                        <h3 class="product-name">Holz-Greifling Regenbogen</h3>
-                        <div class="product-rating">⭐⭐⭐⭐⭐ <span>(89)</span></div>
-                        <div class="product-price">
-                            <span class="price-current">19,99 €</span>
-                        </div>
-                        <button class="btn btn-add">In den Warenkorb</button>
+                        <h3 class="product-name">Musselin-Tuch-Set</h3>
+                        <p class="product-price">34 €</p>
                     </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge badge-new">Neu</div>
+                </article>
+                
+                <article class="product-card">
                     <div class="product-image">
-                        <div class="product-placeholder">🍼</div>
+                        <div class="product-image-placeholder">
+                            <span>Produktfoto</span>
+                        </div>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Ernährung</span>
-                        <h3 class="product-name">Bambus-Trinklernbecher</h3>
-                        <div class="product-rating">⭐⭐⭐⭐⭐ <span>(45)</span></div>
-                        <div class="product-price">
-                            <span class="price-current">14,99 €</span>
-                        </div>
-                        <button class="btn btn-add">In den Warenkorb</button>
+                        <h3 class="product-name">Holz-Greifling</h3>
+                        <p class="product-price">28 €</p>
                     </div>
-                </div>
-                <div class="product-card">
+                </article>
+                
+                <article class="product-card">
                     <div class="product-image">
-                        <div class="product-placeholder">🧴</div>
+                        <div class="product-image-placeholder">
+                            <span>Produktfoto</span>
+                        </div>
+                        <span class="product-badge">Neu</span>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Pflege</span>
-                        <h3 class="product-name">Bio-Babyöl Set</h3>
-                        <div class="product-rating">⭐⭐⭐⭐⭐ <span>(203)</span></div>
-                        <div class="product-price">
-                            <span class="price-current">24,99 €</span>
-                            <span class="price-old">32,99 €</span>
-                        </div>
-                        <button class="btn btn-add">In den Warenkorb</button>
+                        <h3 class="product-name">Bambus-Trinkbecher</h3>
+                        <p class="product-price">22 €</p>
                     </div>
-                </div>
+                </article>
             </div>
-            <div class="products-cta">
-                <a href="#" class="btn btn-outline">Alle Produkte ansehen</a>
+            
+            <div class="products-footer">
+                <a href="#" class="text-link">Alle Produkte ansehen</a>
             </div>
         </div>
     </section>
 
-    <!-- Über uns -->
-    <section id="ueber-uns" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <span class="section-tag">Unsere Geschichte</span>
-                    <h2 class="section-title">Warum Wolkenlest?</h2>
-                    <p>Wir sind zwei Freunde, die selbst Eltern geworden sind und die Suche nach wirklich guten, schadstofffreien Babyprodukten kennen. Genau deshalb haben wir Wolkenlest gegründet.</p>
-                    <p>Jedes Produkt in unserem Sortiment wird von uns persönlich getestet und ausgewählt. Wir legen Wert auf Nachhaltigkeit, faire Produktion und Materialien, die die zarte Babyhaut schonen.</p>
-                    <ul class="about-list">
-                        <li>✓ Persönlich getestet</li>
-                        <li>✓ Nachhaltige Materialien</li>
-                        <li>✓ Faire Produktion</li>
-                        <li>✓ Schadstoffgeprüft</li>
-                    </ul>
+    <!-- About / Story -->
+    <section id="unsere-geschichte" class="story" aria-labelledby="story-heading">
+        <div class="section-container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <span class="story-label">Unsere Geschichte</span>
+                    <h2 id="story-heading" class="story-title">Von Eltern.<br>Für Eltern.</h2>
+                    <div class="story-text">
+                        <p>Wolkennest entstand aus einer einfachen Frage: Warum ist es so schwer, wirklich gute Babyprodukte zu finden? Produkte, die nicht nur schön aussehen, sondern auch wirklich gut sind — für die zarte Haut unserer Kinder und für die Welt, in der sie aufwachsen.</p>
+                        <p>Wir sind zwei Freunde, die gleichzeitig Väter geworden sind. In den ersten Monaten haben wir unzählige Stunden damit verbracht, Materialien zu recherchieren, Hersteller zu kontaktieren und Produkte zu testen. Wir wollten wissen: Was steckt wirklich drin? Wo wird es hergestellt? Hält es, was es verspricht?</p>
+                        <p>Aus dieser Suche entstand Wolkennest. Kein Massenwarenshop, sondern eine sorgfältige Auswahl dessen, was wir selbst unseren Kindern geben. Jedes einzelne Produkt haben wir persönlich geprüft, getestet und für gut befunden.</p>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <div class="about-image-wrapper">
-                        <div class="about-placeholder">
-                            <span>👨‍👩‍👧</span>
-                        </div>
+                <div class="story-image">
+                    <div class="story-image-placeholder" role="img" aria-label="Die Gründer von Wolkennest">
+                        <span>Gründer-Fotografie</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Promise -->
+    <section class="promise" aria-labelledby="promise-heading">
+        <div class="section-container">
+            <div class="promise-content">
+                <h2 id="promise-heading" class="promise-title">Woran wir glauben</h2>
+                <div class="promise-grid">
+                    <div class="promise-item">
+                        <h3 class="promise-item-title">Nur das Beste</h3>
+                        <p class="promise-item-text">Wir führen keine 200 Produkte. Wir führen die, die wir wirklich gut finden. Qualität vor Quantität — immer.</p>
+                    </div>
+                    <div class="promise-item">
+                        <h3 class="promise-item-title">Volle Transparenz</h3>
+                        <p class="promise-item-text">Woher kommt es? Was ist drin? Wer hat es gemacht? Wir erzählen die ganze Geschichte hinter jedem Produkt.</p>
+                    </div>
+                    <div class="promise-item">
+                        <h3 class="promise-item-title">Sanft & Sicher</h3>
+                        <p class="promise-item-text">Schadstoffgeprüft, hypoallergen, frei von bedenklichen Inhaltsstoffen. Weil zarte Babyhaut besonderen Schutz braucht.</p>
+                    </div>
+                    <div class="promise-item">
+                        <h3 class="promise-item-title">Mit Verantwortung</h3>
+                        <p class="promise-item-text">Nachhaltige Materialien, faire Produktion, minimale Verpackung. Für die Zukunft unserer Kinder.</p>
                     </div>
                 </div>
             </div>
@@ -238,66 +246,70 @@
     </section>
 
     <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+        <div class="section-container">
             <div class="newsletter-content">
-                <span class="newsletter-icon">💌</span>
-                <h2>10% Rabatt auf deine erste Bestellung</h2>
-                <p>Melde dich für unseren Newsletter an und erhalte exklusive Angebote, Tipps und Neuigkeiten.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Deine E-Mail-Adresse" required>
-                    <button type="submit" class="btn btn-primary">Anmelden</button>
+                <h2 id="newsletter-heading" class="newsletter-title">Bleib verbunden</h2>
+                <p class="newsletter-text">Sanfte Einblicke in die Welt von Wolkennest — neue Produkte, Gedanken und Momente der Ruhe.</p>
+                <form class="newsletter-form" action="#" method="POST">
+                    <label for="email" class="visually-hidden">E-Mail-Adresse</label>
+                    <input type="email" id="email" name="email" class="newsletter-input" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
+                    <button type="submit" class="newsletter-button">Anmelden</button>
                 </form>
-                <small>Du kannst dich jederzeit wieder abmelden. Datenschutz ist uns wichtig.</small>
+                <p class="newsletter-note">Du kannst dich jederzeit abmelden. Kein Spam, versprochen.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="kontakt" class="footer">
-        <div class="container">
+    <footer id="kontakt" class="footer" role="contentinfo">
+        <div class="section-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="footer-logo">
-                        <span>☁️</span>
-                        <span>Wolkenlest</span>
+                    <a href="#" class="footer-logo" aria-label="Wolkennest">
+                        <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M20 8C15 8 11 11.5 10 16C6 16.5 3 20 3 24C3 29 7 33 12 33H28C33 33 37 29 37 24C37 20 34 16.5 30 16C29 11.5 25 8 20 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="footer-logo-text">Wolkennest</span>
                     </a>
-                    <p>Sanfte Produkte für die kostbarsten Momente deines Lebens.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Pinterest">📌</a>
+                    <p class="footer-tagline">Geborgen von Anfang an.</p>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <div class="footer-nav-group">
+                        <h3 class="footer-nav-title">Kollektion</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">Schlafen</a></li>
+                            <li><a href="#">Unterwegs</a></li>
+                            <li><a href="#">Spielen</a></li>
+                            <li><a href="#">Pflege</a></li>
+                            <li><a href="#">Essen</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">Alle Produkte</a></li>
-                        <li><a href="#">Neuheiten</a></li>
-                        <li><a href="#">Bestseller</a></li>
-                        <li><a href="#">Angebote</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Hilfe</h4>
-                    <ul>
-                        <li><a href="#">Versand & Lieferung</a></li>
-                        <li><a href="#">Rückgaben</a></li>
-                        <li><a href="#">Größenberater</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Kontakt</h4>
-                    <ul>
-                        <li>📧 hello@wolkenlest.de</li>
-                        <li>📞 +49 123 456789</li>
-                        <li>📍 Musterstraße 123<br>12345 Musterstadt</li>
-                    </ul>
-                </div>
+                    
+                    <div class="footer-nav-group">
+                        <h3 class="footer-nav-title">Wolkennest</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#unsere-geschichte">Über uns</a></li>
+                            <li><a href="#">Nachhaltigkeit</a></li>
+                            <li><a href="#">Qualitätsversprechen</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-group">
+                        <h3 class="footer-nav-title">Hilfe</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#">Versand & Retouren</a></li>
+                            <li><a href="#">Größenberater</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Wolkenlest. Alle Rechte vorbehalten.</p>
+                <p class="footer-copyright">© 2026 Wolkennest. Alle Rechte vorbehalten.</p>
                 <div class="footer-legal">
                     <a href="#">Impressum</a>
                     <a href="#">Datenschutz</a>
