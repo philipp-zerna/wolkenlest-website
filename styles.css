@@ -1,45 +1,40 @@
 /* ============================================
    Wolkennest — Premium Baby Lifestyle Brand
-   Minimalist, Scandinavian, Emotional
+   Reduced, Calm, Trustworthy
    ============================================ */
 
-/* CSS Custom Properties */
 :root {
     /* Colors — Warm, Reduced Palette */
-    --color-bg: #FDFCFA;
-    --color-bg-warm: #F9F7F4;
-    --color-cream: #F5F1EB;
-    --color-sand: #E8E2D9;
+    --color-bg: #FAF9F7;
+    --color-bg-warm: #F5F3F0;
+    --color-cream: #EDE9E3;
+    --color-sand: #D9D4CC;
     --color-taupe: #9A958C;
-    --color-taupe-dark: #6B665E;
     --color-text: #3D3A36;
     --color-text-light: #6B665E;
     --color-text-muted: #9A958C;
     --color-white: #FFFFFF;
-    --color-accent: #B8D4E3;
-    --color-accent-soft: #E8F1F5;
+    --color-accent: #C5D8E3;
     
     /* Typography */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     
-    /* Spacing */
+    /* Spacing — Increased */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
     --space-lg: 2.5rem;
     --space-xl: 4rem;
     --space-2xl: 6rem;
-    --space-3xl: 8rem;
+    --space-3xl: 10rem;
     
     /* Container */
     --container-max: 1280px;
-    --container-narrow: 720px;
     
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
 }
 
 /* Reset & Base */
@@ -119,9 +114,8 @@ ul {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(253, 252, 250, 0.95);
+    background: rgba(250, 249, 247, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(154, 149, 140, 0.1);
 }
 
 .nav-container {
@@ -135,21 +129,12 @@ ul {
 }
 
 .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    color: var(--color-text);
-}
-
-.nav-logo-icon {
-    width: 28px;
-    height: 28px;
     color: var(--color-text);
 }
 
 .nav-logo-text {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.625rem;
     font-weight: 500;
     letter-spacing: -0.02em;
 }
@@ -188,28 +173,35 @@ ul {
     width: 100%;
 }
 
-.nav-cart {
+.nav-actions {
     display: flex;
     align-items: center;
+    gap: var(--space-sm);
+}
+
+.nav-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     padding: var(--space-xs);
     color: var(--color-text);
 }
 
-.nav-cart-icon {
-    width: 22px;
-    height: 22px;
+.nav-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .nav-cart-count {
     position: absolute;
     top: -2px;
-    right: -6px;
-    width: 18px;
-    height: 18px;
+    right: -4px;
+    width: 16px;
+    height: 16px;
     background: var(--color-text);
     color: var(--color-bg);
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
     font-weight: 500;
     border-radius: 50%;
     display: flex;
@@ -237,15 +229,15 @@ ul {
 }
 
 /* ============================================
-   Hero
+   Hero — Larger, Calmer
    ============================================ */
 .hero {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: var(--space-xl);
-    padding: calc(80px + var(--space-2xl)) var(--space-lg) var(--space-2xl);
+    gap: var(--space-2xl);
+    padding: calc(80px + var(--space-3xl)) var(--space-lg) var(--space-3xl);
     max-width: var(--container-max);
     margin: 0 auto;
 }
@@ -253,33 +245,33 @@ ul {
 .hero-image-container {
     order: 2;
     height: 100%;
-    min-height: 500px;
+    min-height: 600px;
 }
 
 .hero-image-placeholder {
     width: 100%;
     height: 100%;
-    min-height: 500px;
+    min-height: 600px;
     background: var(--color-cream);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-text-muted);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 
 .hero-content {
     order: 1;
-    padding-right: var(--space-xl);
+    padding-right: var(--space-2xl);
 }
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.05;
     letter-spacing: -0.03em;
     color: var(--color-text);
     margin-bottom: var(--space-md);
@@ -289,16 +281,16 @@ ul {
     font-size: 1.125rem;
     font-weight: 300;
     color: var(--color-text-light);
-    max-width: 400px;
+    max-width: 420px;
     margin-bottom: var(--space-xl);
     line-height: 1.6;
 }
 
 .hero-cta {
     display: inline-block;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-text);
     border-bottom: 1px solid var(--color-text);
@@ -307,8 +299,8 @@ ul {
 }
 
 .hero-cta:hover {
-    color: var(--color-taupe-dark);
-    border-color: var(--color-taupe-dark);
+    color: var(--color-text-light);
+    border-color: var(--color-text-light);
 }
 
 /* ============================================
@@ -341,7 +333,7 @@ ul {
 
 .trust-separator {
     color: var(--color-taupe);
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
 }
 
 /* ============================================
@@ -354,23 +346,14 @@ ul {
 
 .section-title {
     font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 400;
     letter-spacing: -0.02em;
     color: var(--color-text);
-    margin-bottom: var(--space-sm);
-}
-
-.section-intro {
-    font-size: 1.0625rem;
-    font-weight: 300;
-    color: var(--color-text-light);
-    max-width: 500px;
-    margin: 0 auto;
 }
 
 /* ============================================
-   Categories
+   Categories — Larger, 3 per row
    ============================================ */
 .categories {
     padding: var(--space-3xl) 0;
@@ -379,37 +362,23 @@ ul {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 320px);
-    gap: 2px;
-    background: var(--color-sand);
-    border: 2px solid var(--color-sand);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
 }
 
 .category-card {
     position: relative;
-    background: var(--color-bg);
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: var(--transition-normal);
 }
 
 .category-card:hover {
-    background: var(--color-bg-warm);
-}
-
-.category-card:hover .category-image-placeholder {
-    transform: scale(1.02);
-}
-
-.category-large {
-    grid-row: span 2;
-    grid-column: span 2;
+    opacity: 0.85;
 }
 
 .category-image-placeholder {
-    flex: 1;
+    aspect-ratio: 4/5;
     background: var(--color-cream);
     display: flex;
     align-items: center;
@@ -418,33 +387,22 @@ ul {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transition: var(--transition-slow);
+    transition: var(--transition-normal);
 }
 
 .category-content {
-    padding: var(--space-md) var(--space-lg);
+    padding-top: var(--space-sm);
 }
 
 .category-title {
     font-family: var(--font-serif);
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-text);
-    margin-bottom: 2px;
-}
-
-.category-large .category-title {
-    font-size: 1.75rem;
-}
-
-.category-description {
-    font-size: 0.875rem;
-    font-weight: 300;
-    color: var(--color-text-light);
 }
 
 /* ============================================
-   Products
+   Products — Minimalist
    ============================================ */
 .products {
     padding: var(--space-3xl) 0;
@@ -453,16 +411,17 @@ ul {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
 }
 
 .product-card {
-    position: relative;
+    cursor: pointer;
+    transition: var(--transition-normal);
 }
 
-.product-card:hover .product-image-placeholder {
-    transform: scale(1.02);
+.product-card:hover {
+    opacity: 0.9;
 }
 
 .product-image {
@@ -483,20 +442,6 @@ ul {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transition: var(--transition-slow);
-}
-
-.product-badge {
-    position: absolute;
-    top: var(--space-sm);
-    left: var(--space-sm);
-    font-size: 0.6875rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-text);
-    background: var(--color-bg);
-    padding: 6px 12px;
 }
 
 .product-info {
@@ -523,9 +468,10 @@ ul {
 }
 
 .text-link {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 400;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     color: var(--color-text);
     border-bottom: 1px solid var(--color-text);
     padding-bottom: 2px;
@@ -533,12 +479,12 @@ ul {
 }
 
 .text-link:hover {
-    color: var(--color-taupe-dark);
-    border-color: var(--color-taupe-dark);
+    color: var(--color-text-light);
+    border-color: var(--color-text-light);
 }
 
 /* ============================================
-   Story / About
+   Story — Shorter text
    ============================================ */
 .story {
     padding: var(--space-3xl) 0;
@@ -552,45 +498,8 @@ ul {
     align-items: center;
 }
 
-.story-content {
-    max-width: 560px;
-}
-
-.story-label {
-    display: block;
-    font-size: 0.8125rem;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
-}
-
-.story-title {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: 400;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    color: var(--color-text);
-    margin-bottom: var(--space-lg);
-}
-
-.story-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.story-text p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.8;
-    color: var(--color-text-light);
-}
-
 .story-image {
-    position: relative;
+    order: 1;
 }
 
 .story-image-placeholder {
@@ -605,22 +514,54 @@ ul {
     text-transform: uppercase;
 }
 
+.story-content {
+    order: 2;
+    max-width: 480px;
+}
+
+.story-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.story-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+}
+
+.story-text p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--color-text-light);
+}
+
 /* ============================================
-   Promise
+   Values — Simpler
    ============================================ */
-.promise {
+.values {
     padding: var(--space-3xl) 0;
     background: var(--color-bg-warm);
 }
 
-.promise-content {
-    max-width: 900px;
+.values-content {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.promise-title {
+.values-title {
     font-family: var(--font-serif);
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 400;
     text-align: center;
     letter-spacing: -0.02em;
@@ -628,29 +569,30 @@ ul {
     margin-bottom: var(--space-2xl);
 }
 
-.promise-grid {
+.values-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-xl) var(--space-2xl);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    text-align: center;
 }
 
-.promise-item-title {
+.value-item-title {
     font-family: var(--font-serif);
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.125rem;
+    font-weight: 400;
     color: var(--color-text);
     margin-bottom: var(--space-xs);
 }
 
-.promise-item-text {
-    font-size: 0.9375rem;
+.value-item-text {
+    font-size: 0.875rem;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--color-text-light);
 }
 
 /* ============================================
-   Newsletter
+   Newsletter — Elegant
    ============================================ */
 .newsletter {
     padding: var(--space-3xl) 0;
@@ -658,31 +600,23 @@ ul {
 }
 
 .newsletter-content {
-    max-width: 480px;
+    max-width: 440px;
     margin: 0 auto;
     text-align: center;
 }
 
 .newsletter-title {
     font-family: var(--font-serif);
-    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 400;
     letter-spacing: -0.02em;
     color: var(--color-text);
-    margin-bottom: var(--space-sm);
-}
-
-.newsletter-text {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--color-text-light);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
 }
 
 .newsletter-form {
     display: flex;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-sm);
+    gap: var(--space-xs);
 }
 
 .newsletter-input {
@@ -708,7 +642,7 @@ ul {
 
 .newsletter-button {
     padding: var(--space-sm) var(--space-lg);
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -718,63 +652,35 @@ ul {
 }
 
 .newsletter-button:hover {
-    background: var(--color-taupe-dark);
-}
-
-.newsletter-note {
-    font-size: 0.8125rem;
-    font-weight: 300;
-    color: var(--color-text-muted);
+    background: var(--color-text-light);
 }
 
 /* ============================================
-   Footer
+   Footer — Calm
    ============================================ */
 .footer {
-    padding: var(--space-3xl) 0 var(--space-xl);
+    padding: var(--space-2xl) 0 var(--space-lg);
     background: var(--color-bg-warm);
     border-top: 1px solid var(--color-sand);
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr);
-    gap: var(--space-2xl);
-    margin-bottom: var(--space-2xl);
-}
-
-.footer-logo {
     display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    color: var(--color-text);
-    margin-bottom: var(--space-sm);
-}
-
-.footer-logo-icon {
-    width: 24px;
-    height: 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-xl);
 }
 
 .footer-logo-text {
     font-family: var(--font-serif);
     font-size: 1.25rem;
     font-weight: 500;
-}
-
-.footer-tagline {
-    font-size: 0.9375rem;
-    font-weight: 300;
-    color: var(--color-text-light);
-}
-
-.footer-nav-title {
-    font-size: 0.8125rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--color-text);
-    margin-bottom: var(--space-md);
+}
+
+.footer-nav {
+    display: flex;
+    gap: var(--space-2xl);
 }
 
 .footer-nav-list {
@@ -784,7 +690,7 @@ ul {
 }
 
 .footer-nav-list a {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     font-weight: 300;
     color: var(--color-text-light);
     transition: var(--transition-fast);
@@ -795,10 +701,7 @@ ul {
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: var(--space-xl);
+    padding-top: var(--space-lg);
     border-top: 1px solid var(--color-sand);
 }
 
@@ -806,22 +709,6 @@ ul {
     font-size: 0.8125rem;
     font-weight: 300;
     color: var(--color-text-muted);
-}
-
-.footer-legal {
-    display: flex;
-    gap: var(--space-lg);
-}
-
-.footer-legal a {
-    font-size: 0.8125rem;
-    font-weight: 300;
-    color: var(--color-text-muted);
-    transition: var(--transition-fast);
-}
-
-.footer-legal a:hover {
-    color: var(--color-text);
 }
 
 /* ============================================
@@ -851,12 +738,6 @@ ul {
     
     .categories-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 280px);
-    }
-    
-    .category-large {
-        grid-row: span 1;
-        grid-column: span 2;
     }
     
     .products-grid {
@@ -868,11 +749,6 @@ ul {
         gap: var(--space-2xl);
     }
     
-    .story-content {
-        max-width: 100%;
-        order: 2;
-    }
-    
     .story-image {
         order: 1;
         max-width: 500px;
@@ -880,18 +756,21 @@ ul {
         width: 100%;
     }
     
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .story-content {
+        order: 2;
+        max-width: 100%;
+        text-align: center;
     }
     
-    .footer-brand {
-        grid-column: span 2;
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --space-3xl: 5rem;
+        --space-3xl: 6rem;
         --space-2xl: 3rem;
     }
     
@@ -922,7 +801,7 @@ ul {
         visibility: visible;
     }
     
-    .nav-cart {
+    .nav-actions {
         order: 2;
     }
     
@@ -937,11 +816,11 @@ ul {
     
     .categories-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 240px);
+        gap: var(--space-md);
     }
     
-    .category-large {
-        grid-column: span 1;
+    .category-image-placeholder {
+        aspect-ratio: 16/9;
     }
     
     .products-grid {
@@ -950,55 +829,25 @@ ul {
         margin: 0 auto;
     }
     
-    .promise-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
-    
-    .newsletter-form {
-        flex-direction: column;
-    }
-    
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-    }
-    
-    .footer-brand {
-        grid-column: span 1;
-    }
-    
-    .footer-bottom {
         flex-direction: column;
-        gap: var(--space-sm);
+        gap: var(--space-xl);
         text-align: center;
+    }
+    
+    .footer-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--space-xl);
     }
 }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
     
     .section-title {
-        font-size: 1.625rem;
+        font-size: 1.5rem;
     }
-}
-
-/* ============================================
-   Animations
-   ============================================ */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease forwards;
 }
