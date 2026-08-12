@@ -11,7 +11,7 @@
     --color-beige: #D4C8B8;
     --color-text: #343A3E;
     --color-text-light: #6B6B6B;
-    --color-navy: #3D3630;
+    --color-navy: #E8E0D5;
     
     /* Schriften */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -543,8 +543,8 @@ img {
    ============================================ */
 .footer {
     padding: 3rem 0;
-    background: var(--color-navy);
-    color: white;
+    background: #E8E0D5;
+    color: #3D3630;
 }
 
 .footer-grid {
@@ -554,7 +554,7 @@ img {
 }
 
 .footer-brand .logo {
-    color: white;
+    color: #3D3630;
     font-size: 1.25rem;
 }
 
@@ -565,6 +565,7 @@ img {
 
 .footer-links a {
     font-size: 0.8125rem;
+    color: #3D3630;
     opacity: 0.8;
 }
 
@@ -579,6 +580,7 @@ img {
 
 .footer-legal a {
     font-size: 0.6875rem;
+    color: #3D3630;
     opacity: 0.6;
 }
 
