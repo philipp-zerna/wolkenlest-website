@@ -27,8 +27,9 @@
             
             <ul class="nav-menu" id="nav-menu" role="menubar">
                 <li role="none"><a href="#kollektion" class="nav-link" role="menuitem">Shop</a></li>
+                <li role="none"><a href="#neuheiten" class="nav-link" role="menuitem">Neuheiten</a></li>
                 <li role="none"><a href="#unsere-welt" class="nav-link" role="menuitem">Unsere Welt</a></li>
-                <li role="none"><a href="#unsere-geschichte" class="nav-link" role="menuitem">Über uns</a></li>
+                <li role="none"><a href="#ueber-uns" class="nav-link" role="menuitem">Über uns</a></li>
             </ul>
             
             <div class="nav-actions">
@@ -60,43 +61,34 @@
     <!-- Hero -->
     <header class="hero">
         <div class="hero-image-container">
-            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df4?w=1200&h=1600&fit=crop&q=80" 
+            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df4?w=1600&h=2000&fit=crop&q=85" 
                  alt="Mutter hält schlafendes Baby im warmen Licht" 
-                 class="hero-image">
+                 class="hero-image"
+                 fetchpriority="high">
         </div>
         <div class="hero-content">
+            <span class="hero-eyebrow">Willkommen bei Wolkennest</span>
             <h1 class="hero-title">Geborgen von Anfang an.</h1>
-            <p class="hero-subtitle">Sorgfältig ausgewählte Produkte für die kleinen Momente, die alles bedeuten.</p>
+            <p class="hero-subtitle">Liebevoll ausgewählte Produkte für die kostbarsten Momente.</p>
             <a href="#kollektion" class="hero-cta">Wolkennest entdecken</a>
         </div>
     </header>
-
-    <!-- Trust Line -->
-    <section class="trust" aria-label="Vertrauensmerkmale">
-        <div class="trust-container">
-            <span class="trust-item">Sorgfältig ausgewählt</span>
-            <span class="trust-separator" aria-hidden="true">·</span>
-            <span class="trust-item">Hochwertige Materialien</span>
-            <span class="trust-separator" aria-hidden="true">·</span>
-            <span class="trust-item">Bewusst entschieden</span>
-            <span class="trust-separator" aria-hidden="true">·</span>
-            <span class="trust-item">Für Familien gemacht</span>
-        </div>
-    </section>
 
     <!-- Categories -->
     <section id="kollektion" class="categories" aria-labelledby="categories-heading">
         <div class="section-container">
             <header class="section-header">
-                <h2 id="categories-heading" class="section-title">Unsere Kollektion</h2>
+                <span class="section-eyebrow">Unsere Kollektion</span>
+                <h2 id="categories-heading" class="section-title">Für jeden Moment</h2>
             </header>
             
             <div class="categories-grid">
                 <a href="#" class="category-card">
                     <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&h=1000&fit=crop&q=80" 
+                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=900&h=1125&fit=crop&q=80" 
                              alt="Baby schläft in weißer Bettwäsche" 
-                             class="category-image">
+                             class="category-image"
+                             loading="lazy">
                     </div>
                     <div class="category-content">
                         <h3 class="category-title">Schlafen</h3>
@@ -105,9 +97,10 @@
                 
                 <a href="#" class="category-card">
                     <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=1000&fit=crop&q=80" 
+                        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=900&h=1125&fit=crop&q=80" 
                              alt="Vater mit Baby im Tragetuch beim Spaziergang" 
-                             class="category-image">
+                             class="category-image"
+                             loading="lazy">
                     </div>
                     <div class="category-content">
                         <h3 class="category-title">Unterwegs</h3>
@@ -116,37 +109,23 @@
                 
                 <a href="#" class="category-card">
                     <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&h=1000&fit=crop&q=80" 
-                             alt="Baby spielt mit Holzspielzeug auf cremefarbener Decke" 
-                             class="category-image">
+                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=900&h=1125&fit=crop&q=80" 
+                             alt="Baby spielt mit Holzspielzeug" 
+                             class="category-image"
+                             loading="lazy">
                     </div>
                     <div class="category-content">
                         <h3 class="category-title">Spielen</h3>
                     </div>
                 </a>
-                
-                <a href="#" class="category-card">
-                    <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1544367563-12123d8965cd?w=800&h=1000&fit=crop&q=80" 
-                             alt="Sanfte Babyhautpflege mit natürlichen Produkten" 
-                             class="category-image">
-                    </div>
-                    <div class="category-content">
-                        <h3 class="category-title">Pflege</h3>
-                    </div>
-                </a>
-                
-                <a href="#" class="category-card">
-                    <div class="category-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&h=1000&fit=crop&q=80" 
-                             alt="Baby isst mit Holzlöffel" 
-                             class="category-image">
-                    </div>
-                    <div class="category-content">
-                        <h3 class="category-title">Essen</h3>
-                    </div>
-                </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Brand Statement -->
+    <section class="brand-statement" aria-labelledby="statement-heading">
+        <div class="section-container">
+            <h2 id="statement-heading" class="statement-text">Für kleine Menschen.<br>Mit großer Sorgfalt ausgewählt.</h2>
         </div>
     </section>
 
@@ -154,7 +133,8 @@
     <section class="products" aria-labelledby="products-heading">
         <div class="section-container">
             <header class="section-header">
-                <h2 id="products-heading" class="section-title">Ausgewählte Lieblinge</h2>
+                <span class="section-eyebrow">Ausgewählte Lieblinge</span>
+                <h2 id="products-heading" class="section-title">Unsere Favoriten</h2>
             </header>
             
             <div class="products-grid">
@@ -162,10 +142,12 @@
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=800&fit=crop&q=80" 
                              alt="Merino-Wolle Schlafsack in Creme" 
-                             class="product-img">
+                             class="product-img"
+                             loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Merino-Schlafsack</h3>
+                        <p class="product-variant">Naturweiß</p>
                         <p class="product-price">89 €</p>
                     </div>
                 </article>
@@ -174,10 +156,12 @@
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1618238273998-8e7f6e3f4b1e?w=600&h=800&fit=crop&q=80" 
                              alt="Weiches Musselin-Tuch-Set in Naturtönen" 
-                             class="product-img">
+                             class="product-img"
+                             loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Musselin-Tuch-Set</h3>
+                        <p class="product-variant">3 Stück</p>
                         <p class="product-price">34 €</p>
                     </div>
                 </article>
@@ -186,10 +170,12 @@
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&h=800&fit=crop&q=80" 
                              alt="Handgefertigter Holz-Greifling aus Buche" 
-                             class="product-img">
+                             class="product-img"
+                             loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Holz-Greifling</h3>
+                        <p class="product-variant">Buche natur</p>
                         <p class="product-price">28 €</p>
                     </div>
                 </article>
@@ -202,44 +188,60 @@
     </section>
 
     <!-- About / Story -->
-    <section id="unsere-geschichte" class="story" aria-labelledby="story-heading">
+    <section id="ueber-uns" class="story" aria-labelledby="story-heading">
         <div class="section-container">
             <div class="story-grid">
                 <div class="story-image">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop&q=80" 
                          alt="Die Gründer von Wolkennest" 
-                         class="story-img">
+                         class="story-img"
+                         loading="lazy">
                 </div>
                 <div class="story-content">
-                    <span class="story-label">Über uns</span>
-                    <h2 id="story-heading" class="story-title">Von Eltern.<br>Für Eltern.</h2>
+                    <span class="story-eyebrow">Unsere Geschichte</span>
+                    <h2 id="story-heading" class="story-title">Aus dem Wunsch nach etwas Besserem.</h2>
                     <div class="story-text">
-                        <p>Wolkennest entstand, als wir selbst Väter wurden. Wir suchten Produkte, die wirklich gut sind – nicht nur schön aussehen. Heute teilen wir diese Entdeckungen mit anderen Familien.</p>
+                        <p>Wolkennest entstand, als wir selbst Väter wurden. Wir suchten Produkte, die wirklich gut sind – nicht nur schön aussehen. Die erste Zeit mit unseren Kindern hat uns gezeigt, wie wichtig Qualität, Sicherheit und echte Werte sind.</p>
+                        <p>Heute teilen wir unsere Entdeckungen mit anderen Familien. Jedes Produkt in unserem Sortiment haben wir selbst getestet und mit gutem Gewissen ausgewählt.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values -->
-    <section id="unsere-welt" class="values" aria-labelledby="values-heading">
-        <div class="section-container">
-            <div class="values-content">
-                <h2 id="values-heading" class="values-title">Woran wir glauben</h2>
-                <div class="values-grid">
-                    <div class="value-item">
-                        <h3 class="value-item-title">Weniger, aber besser</h3>
-                        <p class="value-item-text">Wir führen keine endlosen Kataloge. Jedes Produkt verdient seinen Platz.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3 class="value-item-title">Ehrlich und klar</h3>
-                        <p class="value-item-text">Wir sagen, was wir wissen – und was wir nicht wissen. Keine leeren Versprechen.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3 class="value-item-title">Mit Bedacht</h3>
-                        <p class="value-item-text">Für die Welt, in der unsere Kinder aufwachsen werden.</p>
-                    </div>
-                </div>
+    <!-- Trust -->
+    <section class="trust" aria-label="Vertrauensmerkmale">
+        <div class="trust-container">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
+                    <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Sichere Zahlung</span>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
+                    <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>30 Tage Rückgabe</span>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span>Versand aus Deutschland</span>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" class="trust-icon" aria-hidden="true">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="9" cy="9" r="1" fill="currentColor"/>
+                    <circle cx="15" cy="9" r="1" fill="currentColor"/>
+                </svg>
+                <span>Persönlicher Kundenservice</span>
             </div>
         </div>
     </section>
@@ -248,12 +250,14 @@
     <section class="newsletter" aria-labelledby="newsletter-heading">
         <div class="section-container">
             <div class="newsletter-content">
-                <h2 id="newsletter-heading" class="newsletter-title">Bleib verbunden</h2>
+                <h2 id="newsletter-heading" class="newsletter-title">Ein Platz im Wolkennest.</h2>
+                <p class="newsletter-text">Neuheiten, Inspiration und ausgewählte Geschichten für die erste gemeinsame Zeit.</p>
                 <form class="newsletter-form" action="#" method="POST">
                     <label for="email" class="visually-hidden">E-Mail-Adresse</label>
                     <input type="email" id="email" name="email" class="newsletter-input" placeholder="Deine E-Mail-Adresse" required autocomplete="email">
                     <button type="submit" class="newsletter-button">Anmelden</button>
                 </form>
+                <p class="newsletter-note">Als Willkommensgeschenk erhältst du 10% Rabatt auf deine erste Bestellung.</p>
             </div>
         </div>
     </section>
@@ -266,36 +270,47 @@
                     <a href="#" class="footer-logo" aria-label="Wolkennest">
                         <span class="footer-logo-text">Wolkennest</span>
                     </a>
+                    <p class="footer-tagline">Geborgen von Anfang an.</p>
                 </div>
                 
-                <nav class="footer-nav" aria-label="Footer Navigation">
-                    <div class="footer-nav-group">
-                        <ul class="footer-nav-list">
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#unsere-welt">Unsere Welt</a></li>
-                            <li><a href="#unsere-geschichte">Über uns</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-nav-group">
-                        <ul class="footer-nav-list">
-                            <li><a href="#">Versand</a></li>
-                            <li><a href="#">Retouren</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-nav-group">
-                        <ul class="footer-nav-list">
-                            <li><a href="#">Impressum</a></li>
-                            <li><a href="#">Datenschutz</a></li>
-                            <li><a href="#">AGB</a></li>
-                        </ul>
-                    </div>
+                <nav class="footer-nav" aria-label="Shop Navigation">
+                    <h3 class="footer-nav-title">Shop</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">Schlafen</a></li>
+                        <li><a href="#">Unterwegs</a></li>
+                        <li><a href="#">Spielen</a></li>
+                        <li><a href="#">Pflege</a></li>
+                        <li><a href="#">Essen</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer-nav" aria-label="Service Navigation">
+                    <h3 class="footer-nav-title">Service</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">Versand</a></li>
+                        <li><a href="#">Retouren</a></li>
+                        <li><a href="#">Größenberater</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer-nav" aria-label="Unternehmen Navigation">
+                    <h3 class="footer-nav-title">Unternehmen</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#ueber-uns">Über uns</a></li>
+                        <li><a href="#unsere-welt">Unsere Welt</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
                 </nav>
             </div>
             
             <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">AGB</a>
+                    <a href="#">Widerruf</a>
+                </div>
                 <p class="footer-copyright">© 2026 Wolkennest</p>
             </div>
         </div>

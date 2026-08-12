@@ -1,5 +1,6 @@
 /**
- * Wolkennest — Minimal, elegant interactions
+ * Wolkennest — Premium Baby Lifestyle Brand
+ * Minimal, elegant interactions
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -59,16 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartCount = document.querySelector('.nav-cart-count');
     let count = 0;
     
-    // Add to cart on product card click (placeholder)
+    // Add to cart on product card click
     document.querySelectorAll('.product-card').forEach(card => {
-        card.style.cursor = 'pointer';
         card.addEventListener('click', function() {
             count++;
             if (cartCount) {
                 cartCount.textContent = count;
-                cartCount.style.opacity = '0';
+                cartCount.style.transform = 'scale(1.2)';
                 setTimeout(() => {
-                    cartCount.style.opacity = '1';
+                    cartCount.style.transform = 'scale(1)';
                 }, 150);
             }
         });
@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe sections for subtle reveal
-    document.querySelectorAll('.category-card, .product-card, .promise-item, .story-content').forEach((el, index) => {
+    // Observe elements for subtle reveal
+    document.querySelectorAll('.category-card, .product-card, .trust-item, .story-content').forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
