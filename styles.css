@@ -11,7 +11,7 @@
     --color-beige: #D4C8B8;
     --color-text: #343A3E;
     --color-text-light: #6B6B6B;
-    --color-navy: #2F4053;
+    --color-navy: #3D3630;
     
     /* Schriften */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -229,7 +229,7 @@ img {
 }
 
 .btn:hover {
-    background: #243442;
+    background: #2A2520;
 }
 
 /* ============================================
